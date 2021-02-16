@@ -47,7 +47,7 @@
 
 		/*轮播图*/
 		swiper {
-			height: calc(100vh - 100rpx);
+			height: 100vh;
 			width: 100%;
 
 			.swiper-item {
