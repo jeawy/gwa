@@ -9,7 +9,7 @@
 			</ul>
 			<div class="row projects-wrapper">
 				<div class="col-12 p-0">
-					<a href="<?php the_permalink(); ?>">
+					<a href="">
 						<img src="static/projects/demo.jpg" alt="demo-project" />
 					</a>
 				</div>
