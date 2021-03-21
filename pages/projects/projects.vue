@@ -19,10 +19,13 @@
 					</a>
 					<div class="d-flex justify-content-between">
 						<div>503 Kent Street, Mascot, NSW 2020</div>
-						<div class="share-btn"><i class="fa fa-share-square-o" aria-hidden="true"></i></div>
+						<div class="share-btn" @click="open"><i class="fa fa-share-square-o" aria-hidden="true"></i></div>
 					</div>
 				</div>
 			</div>
+			<uni-popup ref="popup" type="share">
+				<uni-popup-share @select="select"></uni-popup-share>
+			</uni-popup>
 		</div>
 	</view>
 </template>
@@ -44,7 +47,12 @@
 			})
 		},
 		methods: {
-			
+			open() {
+				this.$refs.popup.open()
+			},
+			select({item, index}) {
+				console.log('selected social platform: ', item, index)
+			}
 		}
 	}
 </script>
