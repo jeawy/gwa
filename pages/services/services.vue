@@ -1,43 +1,147 @@
 <template>
 	<view>
-		 <web-view id="mapContainer" :src="url"  ></web-view>
+		<div class="container">
+			<div id="properties">
+				<ul class="categories_wrapper">
+					<li><a href="">All</a></li>
+					<li><a href="">Realestate</a></li>
+					<li><a href="">Market</a></li>
+					<li><a href="">Lunch</a></li>
+					<li><a href="">Finance</a></li>
+				</ul>
+				<div class="property-posts">
+					<div class="row align-items-center vpost_wrapper">
+						<div class="col-5 pe-0 img-wrapper">
+							<a href="<?php the_permalink(); ?>">
+								<img src="static/projects/demo.jpg" alt="project-demo">          
+							</a>
+						</div>
+						<div class="col-7">            
+							<div class="row right">
+								<div class="col-12 ps-0">
+									<a href="<?php the_permalink(); ?>">
+										<span class="title">Investment on Sydney Shipping Copy</span>               
+									</a>
+								</div>  
+								<div class="col-12 p-0 desc">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit....
+								</div>
+								<div class="below_title p-0 d-flex justify-content-between align-items-center">
+										<div><span class="category">Realestate</span></div>
+										<div class="share-btn" @click="handleClick">
+											<i class="fa fa-share-square-o" aria-hidden="true"></i>
+										</div>
+								</div>
+							</div>        
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<UniPopup ref="popup" type="share">
+			<UniPopupShare @select="select"></UniPopupShare>
+		</UniPopup>
 	</view>
 </template>
 
 <script>
+	import UniPopup from 'uni_modules/uni-popup/components/uni-popup/uni-popup.vue'
+	import UniPopupShare from 'uni_modules/uni-popup/components/uni-popup-share/uni-popup-share.vue'
 	export default {
+		components: {
+			UniPopup,
+			UniPopupShare
+		},
 		data() {
 			return {
-				url:"http://remi.net.au/gwa-app/"
+				
 			}
 		},
-		onLoad(){
-			var height=0;//定义动态的高度变量，如高度为定值，可以直接写
-			uni.getSystemInfo({
-				//成功获取的回调函数，返回值为系统信息
-				success: (sysinfo) => {
-				height = sysinfo.windowHeight;//自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种
-			},
-			complete: () => {
-			    }
-			});
-			var currentWebview = this.$scope.$getAppWebview();//获取当前web-view
-			setTimeout(function() {
-					var wv = currentWebview.children()[0];
-					wv.setStyle({//设置web-view距离顶部的距离以及自己的高度，单位为px
-					top: 68,//此处是距离顶部的高度，应该是你页面的头部
-					height:height,//webview的高度
-					
-					scalable:false      //webview的页面是否可以缩放，双指放大缩小
-				})
-			}, 1000);//如页面初始化调用需要写延迟 
-		},
 		methods: {
-			
+			handleClick() {
+				this.$refs.popup.open()
+			},
+			select({item, index}) {
+				console.log('selected social platform: ', item, index)
+			}
 		}
 	}
 </script>
 
 <style>
+/*
+    Home properties
+*/
+#properties {
+  padding-top: 5px;
+}
+#properties .vpost_wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #616161;
+  font-size: 0.8rem;
+}
+#properties .vpost_wrapper .img-wrapper {
+  padding-right: 5px;
+}
 
+#properties .vpost_wrapper .title {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  color: #D6B88B;
+}
+
+#properties .vpost_wrapper .below_title {
+  display: flex;
+  font-size: .8rem;
+  margin-top: 10px;
+  align-items: center;
+}
+#properties .vpost_wrapper .below_title .share-btn {
+  margin-right: 1em;
+  font-size: 1.5em;
+}
+#properties .vpost_wrapper .row.right {
+  padding-left: 8px;
+}
+#properties .vpost_wrapper .below_title .category {
+  text-decoration: none;
+  color: #fff;
+  background-color: #D6B88B;
+  border-radius: 4px;
+  margin-right: 5px;
+  padding: 2px 5px;
+}
+#properties .vpost_wrapper .desc {
+  font-size: 0.8rem;
+}
+#properties .vpost_wrapper .desc p {
+  margin-bottom: 5px;
+}
+#properties .vpost_wrapper .meta-data {
+  padding: 0;
+}
+#properties .vpost_wrapper .meta-data div {
+  display: inline-block;
+}
+#properties .vpost_wrapper .meta-data .fa {
+  color: rgba(0, 0, 0, 0.3);
+}
+#properties .vpost_wrapper .meta-data .comments {
+  margin-left: 10px;
+}
+#properties .categories_wrapper {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+#properties .categories_wrapper li {
+  color: #fff;
+  background-color: #D6B88B;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-size: .9em;
+}
 </style>

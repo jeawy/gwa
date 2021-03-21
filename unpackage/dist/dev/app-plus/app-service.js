@@ -1147,11 +1147,150 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("view", [
-    _c("web-view", {
-      attrs: { id: "mapContainer", src: _vm._$s(1, "a-src", _vm.url), _i: 1 }
-    })
-  ])
+  return _c(
+    "view",
+    [
+      _c(
+        "div",
+        { staticClass: _vm._$s(1, "sc", "container"), attrs: { _i: 1 } },
+        [
+          _c("div", { attrs: { id: "properties", _i: 2 } }, [
+            _c(
+              "ul",
+              {
+                staticClass: _vm._$s(3, "sc", "categories_wrapper"),
+                attrs: { _i: 3 }
+              },
+              [
+                _c("li", [_c("a", {})]),
+                _c("li", [_c("a", {})]),
+                _c("li", [_c("a", {})]),
+                _c("li", [_c("a", {})]),
+                _c("li", [_c("a", {})])
+              ]
+            ),
+            _c(
+              "div",
+              {
+                staticClass: _vm._$s(14, "sc", "property-posts"),
+                attrs: { _i: 14 }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: _vm._$s(
+                      15,
+                      "sc",
+                      "row align-items-center vpost_wrapper"
+                    ),
+                    attrs: { _i: 15 }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: _vm._$s(
+                          16,
+                          "sc",
+                          "col-5 pe-0 img-wrapper"
+                        ),
+                        attrs: { _i: 16 }
+                      },
+                      [_c("a", {}, [_c("img", { attrs: { _i: 18 } })])]
+                    ),
+                    _c(
+                      "div",
+                      {
+                        staticClass: _vm._$s(19, "sc", "col-7"),
+                        attrs: { _i: 19 }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: _vm._$s(20, "sc", "row right"),
+                            attrs: { _i: 20 }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: _vm._$s(21, "sc", "col-12 ps-0"),
+                                attrs: { _i: 21 }
+                              },
+                              [
+                                _c("a", {}, [
+                                  _c("span", {
+                                    staticClass: _vm._$s(23, "sc", "title"),
+                                    attrs: { _i: 23 }
+                                  })
+                                ])
+                              ]
+                            ),
+                            _c("div", {
+                              staticClass: _vm._$s(24, "sc", "col-12 p-0 desc"),
+                              attrs: { _i: 24 }
+                            }),
+                            _c(
+                              "div",
+                              {
+                                staticClass: _vm._$s(
+                                  25,
+                                  "sc",
+                                  "below_title p-0 d-flex justify-content-between align-items-center"
+                                ),
+                                attrs: { _i: 25 }
+                              },
+                              [
+                                _c("div", [
+                                  _c("span", {
+                                    staticClass: _vm._$s(27, "sc", "category"),
+                                    attrs: { _i: 27 }
+                                  })
+                                ]),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: _vm._$s(28, "sc", "share-btn"),
+                                    attrs: { _i: 28 },
+                                    on: { click: _vm.handleClick }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: _vm._$s(
+                                        29,
+                                        "sc",
+                                        "fa fa-share-square-o"
+                                      ),
+                                      attrs: { _i: 29 }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ])
+        ]
+      ),
+      _c(
+        "UniPopup",
+        { ref: "popup", attrs: { type: "share", _i: 30 } },
+        [
+          _c("UniPopupShare", { attrs: { _i: 31 }, on: { select: _vm.select } })
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -1179,7 +1318,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      url: \"http://remi.net.au/gwa-app/\" };\n\n  },\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  methods: {} };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvc2VydmljZXMvc2VydmljZXMudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFPQTtBQUNBLE1BREEsa0JBQ0E7QUFDQTtBQUNBLHdDQURBOztBQUdBLEdBTEE7QUFNQSxRQU5BLG9CQU1BO0FBQ0EsbUJBREEsQ0FDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNDQURBLENBQ0E7QUFDQSxPQUpBO0FBS0E7QUFDQSxPQU5BOztBQVFBLHNEQVZBLENBVUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQURBLEVBQ0E7QUFDQSxzQkFGQSxFQUVBOztBQUVBLHVCQUpBLENBSUE7QUFKQTtBQU1BLEtBUkEsRUFRQSxJQVJBLEVBWEEsQ0FtQkE7QUFDQSxHQTFCQTtBQTJCQSxhQTNCQSxFIiwiZmlsZSI6IjQwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8dmlldz5cblx0XHQgPHdlYi12aWV3IGlkPVwibWFwQ29udGFpbmVyXCIgOnNyYz1cInVybFwiICA+PC93ZWItdmlldz5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0ZXhwb3J0IGRlZmF1bHQge1xuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xuXHRcdFx0XHR1cmw6XCJodHRwOi8vcmVtaS5uZXQuYXUvZ3dhLWFwcC9cIlxuXHRcdFx0fVxuXHRcdH0sXHJcblx0XHRvbkxvYWQoKXtcclxuXHRcdFx0dmFyIGhlaWdodD0wOy8v5a6a5LmJ5Yqo5oCB55qE6auY5bqm5Y+Y6YeP77yM5aaC6auY5bqm5Li65a6a5YC877yM5Y+v5Lul55u05o6l5YaZXHJcblx0XHRcdHVuaS5nZXRTeXN0ZW1JbmZvKHtcclxuXHRcdFx0XHQvL+aIkOWKn+iOt+WPlueahOWbnuiwg+WHveaVsO+8jOi/lOWbnuWAvOS4uuezu+e7n+S/oeaBr1xyXG5cdFx0XHRcdHN1Y2Nlc3M6IChzeXNpbmZvKSA9PiB7XHJcblx0XHRcdFx0aGVpZ2h0ID0gc3lzaW5mby53aW5kb3dIZWlnaHQ7Ly/oh6rooYzkv67mlLnvvIzoh6rlt7HpnIDopoHnmoTpq5jluqbCoOatpOWkhOWmguW6lemDqOacieWFtuS7luWGheWuue+8jOWPr+S7peebtOaOpS0tLSgtNTAp6L+Z56eNXHJcblx0XHRcdH0sXHJcblx0XHRcdGNvbXBsZXRlOiAoKSA9PiB7XHJcblx0XHRcdCAgICB9XHJcblx0XHRcdH0pO1xyXG5cdFx0XHR2YXIgY3VycmVudFdlYnZpZXcgPSB0aGlzLiRzY29wZS4kZ2V0QXBwV2VidmlldygpOy8v6I635Y+W5b2T5YmNd2ViLXZpZXdcclxuXHRcdFx0c2V0VGltZW91dChmdW5jdGlvbigpIHtcclxuXHRcdFx0XHRcdHZhciB3diA9IGN1cnJlbnRXZWJ2aWV3LmNoaWxkcmVuKClbMF07XHJcblx0XHRcdFx0XHR3di5zZXRTdHlsZSh7Ly/orr7nva53ZWItdmlld+i3neemu+mhtumDqOeahOi3neemu+S7peWPiuiHquW3seeahOmrmOW6pu+8jOWNleS9jeS4unB4XHJcblx0XHRcdFx0XHR0b3A6IDY4LC8v5q2k5aSE5piv6Led56a76aG26YOo55qE6auY5bqm77yM5bqU6K+l5piv5L2g6aG16Z2i55qE5aS06YOoXHJcblx0XHRcdFx0XHRoZWlnaHQ6aGVpZ2h0LC8vd2Vidmlld+eahOmrmOW6plxyXG5cdFx0XHRcdFx0XHJcblx0XHRcdFx0XHRzY2FsYWJsZTpmYWxzZcKgIMKgIMKgIC8vd2Vidmlld+eahOmhtemdouaYr+WQpuWPr+S7pee8qeaUvu+8jOWPjOaMh+aUvuWkp+e8qeWwj1xyXG5cdFx0XHRcdH0pXHJcblx0XHRcdH0sIDEwMDApOy8v5aaC6aG16Z2i5Yid5aeL5YyW6LCD55So6ZyA6KaB5YaZ5bu26L+fIFxyXG5cdFx0fSxcblx0XHRtZXRob2RzOiB7XG5cdFx0XHRcblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG5cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///40\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniPopup = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 11));\nvar _uniPopupShare = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup-share/uni-popup-share.vue */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default = { components: { UniPopup: _uniPopup.default, UniPopupShare: _uniPopupShare.default }, data: function data() {return {};}, methods: { handleClick: function handleClick() {this.$refs.popup.open();}, select: function select(_ref) {var item = _ref.item,index = _ref.index;__f__(\"log\", 'selected social platform: ', item, index, \" at pages/services/services.vue:65\");} } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 30)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvc2VydmljZXMvc2VydmljZXMudnVlIl0sIm5hbWVzIjpbImNvbXBvbmVudHMiLCJVbmlQb3B1cCIsIlVuaVBvcHVwU2hhcmUiLCJkYXRhIiwibWV0aG9kcyIsImhhbmRsZUNsaWNrIiwiJHJlZnMiLCJwb3B1cCIsIm9wZW4iLCJzZWxlY3QiLCJpdGVtIiwiaW5kZXgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0NBO0FBQ0EsaUosOEZBaERBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO2VBSWUsRUFDZEEsVUFBVSxFQUFFLEVBQ1hDLFFBQVEsRUFBUkEsaUJBRFcsRUFFWEMsYUFBYSxFQUFiQSxzQkFGVyxFQURFLEVBS2RDLElBTGMsa0JBS1AsQ0FDTixPQUFPLEVBQVAsQ0FHQSxDQVRhLEVBVWRDLE9BQU8sRUFBRSxFQUNSQyxXQURRLHlCQUNNLENBQ2IsS0FBS0MsS0FBTCxDQUFXQyxLQUFYLENBQWlCQyxJQUFqQixHQUNBLENBSE8sRUFJUkMsTUFKUSx3QkFJYyxLQUFkQyxJQUFjLFFBQWRBLElBQWMsQ0FBUkMsS0FBUSxRQUFSQSxLQUFRLENBQ3JCLGFBQVksNEJBQVosRUFBMENELElBQTFDLEVBQWdEQyxLQUFoRCx3Q0FDQSxDQU5PLEVBVkssRSIsImZpbGUiOiI0MC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cbmltcG9ydCBVbmlQb3B1cCBmcm9tICd1bmlfbW9kdWxlcy91bmktcG9wdXAvY29tcG9uZW50cy91bmktcG9wdXAvdW5pLXBvcHVwLnZ1ZSdcbmltcG9ydCBVbmlQb3B1cFNoYXJlIGZyb20gJ3VuaV9tb2R1bGVzL3VuaS1wb3B1cC9jb21wb25lbnRzL3VuaS1wb3B1cC1zaGFyZS91bmktcG9wdXAtc2hhcmUudnVlJ1xuZXhwb3J0IGRlZmF1bHQge1xuXHRjb21wb25lbnRzOiB7XG5cdFx0VW5pUG9wdXAsXG5cdFx0VW5pUG9wdXBTaGFyZVxuXHR9LFxuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHRcblx0XHR9XG5cdH0sXG5cdG1ldGhvZHM6IHtcblx0XHRoYW5kbGVDbGljaygpIHtcblx0XHRcdHRoaXMuJHJlZnMucG9wdXAub3BlbigpXG5cdFx0fSxcblx0XHRzZWxlY3Qoe2l0ZW0sIGluZGV4fSkge1xuXHRcdFx0Y29uc29sZS5sb2coJ3NlbGVjdGVkIHNvY2lhbCBwbGF0Zm9ybTogJywgaXRlbSwgaW5kZXgpXG5cdFx0fVxuXHR9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///40\n");
 
 /***/ }),
 /* 41 */
