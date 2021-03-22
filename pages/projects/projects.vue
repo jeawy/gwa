@@ -58,14 +58,14 @@
 			toggleCategory(id) {
 				if(id) {
 					uni.request({
-						url: this.$baseURL + '/all_projects?_embed&projects_categories='+id,
+						url: this.$baseURL + '/wp/v2/all_projects?_embed&projects_categories='+id,
 						method: 'get'
 					}).then(([err, res]) => {
 						this.projects = res.data
 					})					
 				}else{
 					uni.request({
-						url: this.$baseURL + '/all_projects?_embed',
+						url: this.$baseURL + '/wp/v2/all_projects?_embed',
 						method: 'get'
 					}).then(([err, res]) => {
 						console.log(res.data); 
@@ -76,7 +76,7 @@
 		},
 		onLoad() {
 			uni.request({
-				url: this.$baseURL + '/all_projects?_embed',
+				url: this.$baseURL + '/wp/v2/all_projects?_embed',
 				method: 'get'
 			}).then(([err, res]) => {
 				console.log(res.data); 
@@ -84,7 +84,7 @@
 			})
 			
 			uni.request({
-				url: this.$baseURL + '/projects_categories',
+				url: this.$baseURL + '/wp/v2/projects_categories',
 				method: 'get'
 			}).then(([err, res]) => {
 				this.categories = res.data

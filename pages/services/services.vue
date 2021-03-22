@@ -67,14 +67,14 @@
 			toggleCategory(id) {
 				if(id) {
 					uni.request({
-						url: this.$baseURL + '/posts?_embed&categories='+id,
+						url: this.$baseURL + '/wp/v2/posts?_embed&categories='+id,
 						method: 'get'
 					}).then(([err, res]) => {
 						this.projects = res.data
 					})					
 				}else{
 					uni.request({
-						url: this.$baseURL + '/posts?_embed',
+						url: this.$baseURL + '/wp/v2/posts?_embed',
 						method: 'get'
 					}).then(([err, res]) => {
 						this.projects = res.data
@@ -89,7 +89,7 @@
 		onLoad() {
 			// get all categories
 			uni.request({
-				url: this.$baseURL + '/categories?filter[orderby]=date&order=desc',
+				url: this.$baseURL + '/wp/v2/categories?filter[orderby]=date&order=desc',
 				method: 'get'
 			}).then(([err, res]) => {
 				this.categories = res.data
@@ -97,7 +97,7 @@
 			
 			// get all projects details
 			uni.request({
-				url: this.$baseURL + '/posts?_embed',
+				url: this.$baseURL + '/wp/v2/posts?_embed',
 				method: 'get'
 			}).then(([err, res]) => {
 				this.projects = res.data
@@ -106,7 +106,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 /*
     Home properties
 */
