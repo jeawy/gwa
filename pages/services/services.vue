@@ -3,31 +3,30 @@
 		<div class="container">
 			<div id="properties">
 				<ul class="categories_wrapper">
-					<li><a href="">All</a></li>
-					<li><a href="">Realestate</a></li>
-					<li><a href="">Market</a></li>
-					<li><a href="">Lunch</a></li>
-					<li><a href="">Finance</a></li>
+					<li><a href="#" @click.prevent="() => toggleCategory(null)">All</a></li>
+					<li v-for="cat in categories" :key="cat.name"  v-if="cat.name!=='Uncategorised'">
+						<a href="#" @click.prevent="() => toggleCategory(cat.id)">{{ cat.name }}</a>
+					</li>
 				</ul>
 				<div class="property-posts">
-					<div class="row align-items-center vpost_wrapper">
+					<div class="row align-items-center vpost_wrapper" v-for="project in projects" :key="project.id">
 						<div class="col-5 pe-0 img-wrapper">
-							<a href="<?php the_permalink(); ?>">
-								<img src="static/projects/demo.jpg" alt="project-demo">          
+							<a :href="project.link">
+								<img :src="project.fimg_url" :alt="project.title.rendered">          
 							</a>
 						</div>
 						<div class="col-7">            
 							<div class="row right">
 								<div class="col-12 ps-0">
 									<a href="<?php the_permalink(); ?>">
-										<span class="title">Investment on Sydney Shipping Copy</span>               
+										<span class="title">{{ project.title.rendered }}</span>               
 									</a>
 								</div>  
 								<div class="col-12 p-0 desc">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit....
+									{{ limitChars(project.excerpt.rendered) }}
 								</div>
 								<div class="below_title p-0 d-flex justify-content-between align-items-center">
-										<div><span class="category">Realestate</span></div>
+										<div><span class="category">{{ project._embedded['wp:term'][0][0].name }}</span></div>
 										<div class="share-btn" @click="handleClick">
 											<i class="fa fa-share-square-o" aria-hidden="true"></i>
 										</div>
@@ -54,7 +53,8 @@
 		},
 		data() {
 			return {
-				
+				categories: null,
+				projects: null
 			}
 		},
 		methods: {
@@ -63,7 +63,45 @@
 			},
 			select({item, index}) {
 				console.log('selected social platform: ', item, index)
+			},
+			toggleCategory(id) {
+				if(id) {
+					uni.request({
+						url: this.$baseURL + '/posts?_embed&categories='+id,
+						method: 'get'
+					}).then(([err, res]) => {
+						this.projects = res.data
+					})					
+				}else{
+					uni.request({
+						url: this.$baseURL + '/posts?_embed',
+						method: 'get'
+					}).then(([err, res]) => {
+						this.projects = res.data
+					})
+				}
+			},
+			limitChars(str) {
+				str = str.replace(/<\/?p[^>]*>/g, "")
+				return str.substr(0, 50)+'...'
 			}
+		},
+		onLoad() {
+			// get all categories
+			uni.request({
+				url: this.$baseURL + '/categories?filter[orderby]=date&order=desc',
+				method: 'get'
+			}).then(([err, res]) => {
+				this.categories = res.data
+			})
+			
+			// get all projects details
+			uni.request({
+				url: this.$baseURL + '/posts?_embed',
+				method: 'get'
+			}).then(([err, res]) => {
+				this.projects = res.data
+			})
 		}
 	}
 </script>
@@ -73,7 +111,7 @@
     Home properties
 */
 #properties {
-  padding-top: 5px;
+  padding-top: 65px;
 }
 #properties .vpost_wrapper {
   padding-top: 10px;

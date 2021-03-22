@@ -2174,78 +2174,85 @@ var render = function() {
                   _c(
                     "li",
                     { attrs: { _i: 4 } },
-                    [_c("a", { attrs: { href: "", _i: 5 } }, [_vm._v("All")])],
-                    1
-                  ),
-                  _c(
-                    "li",
-                    { attrs: { _i: 6 } },
                     [
-                      _c("a", { attrs: { href: "", _i: 7 } }, [
-                        _vm._v("Realestate")
-                      ])
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "#", _i: 5 },
+                          on: {
+                            click: function($event) {
+                              return _vm.$handleViewEvent($event, {
+                                prevent: true
+                              })
+                            }
+                          }
+                        },
+                        [_vm._v("All")]
+                      )
                     ],
                     1
                   ),
-                  _c(
-                    "li",
-                    { attrs: { _i: 8 } },
-                    [
-                      _c("a", { attrs: { href: "", _i: 9 } }, [
-                        _vm._v("Market")
-                      ])
-                    ],
-                    1
-                  ),
-                  _c(
-                    "li",
-                    { attrs: { _i: 10 } },
-                    [
-                      _c("a", { attrs: { href: "", _i: 11 } }, [
-                        _vm._v("Lunch")
-                      ])
-                    ],
-                    1
-                  ),
-                  _c(
-                    "li",
-                    { attrs: { _i: 12 } },
-                    [
-                      _c("a", { attrs: { href: "", _i: 13 } }, [
-                        _vm._v("Finance")
-                      ])
-                    ],
-                    1
-                  )
+                  _vm._l(_vm._$g(6, "f"), function(cat, $10, $20, $30) {
+                    return _vm._$g("6-" + $30, "i")
+                      ? _c(
+                          "li",
+                          { key: cat, attrs: { _i: "6-" + $30 } },
+                          [
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "#", _i: "7-" + $30 },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.$handleViewEvent($event, {
+                                      prevent: true
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v(_vm._$g("7-" + $30, "t0-0"))]
+                            )
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  })
                 ],
-                1
+                2
               ),
               _c(
                 "div",
-                { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
-                [
-                  _c(
+                { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+                _vm._l(_vm._$g(9, "f"), function(project, $11, $21, $31) {
+                  return _c(
                     "div",
-                    { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
+                    {
+                      key: project,
+                      staticClass: _vm._$g("9-" + $31, "sc"),
+                      attrs: { _i: "9-" + $31 }
+                    },
                     [
                       _c(
                         "div",
-                        { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
+                        {
+                          staticClass: _vm._$g("10-" + $31, "sc"),
+                          attrs: { _i: "10-" + $31 }
+                        },
                         [
                           _c(
                             "a",
                             {
                               attrs: {
-                                href: "<?php the_permalink(); ?>",
-                                _i: 17
+                                href: _vm._$g("11-" + $31, "a-href"),
+                                _i: "11-" + $31
                               }
                             },
                             [
                               _c("img", {
                                 attrs: {
-                                  src: "static/projects/demo.jpg",
-                                  alt: "project-demo",
-                                  _i: 18
+                                  src: _vm._$g("12-" + $31, "a-src"),
+                                  alt: _vm._$g("12-" + $31, "a-alt"),
+                                  _i: "12-" + $31
                                 }
                               })
                             ],
@@ -2256,20 +2263,23 @@ var render = function() {
                       ),
                       _c(
                         "div",
-                        { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
+                        {
+                          staticClass: _vm._$g("13-" + $31, "sc"),
+                          attrs: { _i: "13-" + $31 }
+                        },
                         [
                           _c(
                             "div",
                             {
-                              staticClass: _vm._$g(20, "sc"),
-                              attrs: { _i: 20 }
+                              staticClass: _vm._$g("14-" + $31, "sc"),
+                              attrs: { _i: "14-" + $31 }
                             },
                             [
                               _c(
                                 "div",
                                 {
-                                  staticClass: _vm._$g(21, "sc"),
-                                  attrs: { _i: 21 }
+                                  staticClass: _vm._$g("15-" + $31, "sc"),
+                                  attrs: { _i: "15-" + $31 }
                                 },
                                 [
                                   _c(
@@ -2277,21 +2287,20 @@ var render = function() {
                                     {
                                       attrs: {
                                         href: "<?php the_permalink(); ?>",
-                                        _i: 22
+                                        _i: "16-" + $31
                                       }
                                     },
                                     [
                                       _c(
                                         "span",
                                         {
-                                          staticClass: _vm._$g(23, "sc"),
-                                          attrs: { _i: 23 }
+                                          staticClass: _vm._$g(
+                                            "17-" + $31,
+                                            "sc"
+                                          ),
+                                          attrs: { _i: "17-" + $31 }
                                         },
-                                        [
-                                          _vm._v(
-                                            "Investment on Sydney Shipping Copy"
-                                          )
-                                        ]
+                                        [_vm._v(_vm._$g("17-" + $31, "t0-0"))]
                                       )
                                     ],
                                     1
@@ -2302,33 +2311,32 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: _vm._$g(24, "sc"),
-                                  attrs: { _i: 24 }
+                                  staticClass: _vm._$g("18-" + $31, "sc"),
+                                  attrs: { _i: "18-" + $31 }
                                 },
-                                [
-                                  _vm._v(
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
-                                  )
-                                ]
+                                [_vm._v(_vm._$g("18-" + $31, "t0-0"))]
                               ),
                               _c(
                                 "div",
                                 {
-                                  staticClass: _vm._$g(25, "sc"),
-                                  attrs: { _i: 25 }
+                                  staticClass: _vm._$g("19-" + $31, "sc"),
+                                  attrs: { _i: "19-" + $31 }
                                 },
                                 [
                                   _c(
                                     "div",
-                                    { attrs: { _i: 26 } },
+                                    { attrs: { _i: "20-" + $31 } },
                                     [
                                       _c(
                                         "span",
                                         {
-                                          staticClass: _vm._$g(27, "sc"),
-                                          attrs: { _i: 27 }
+                                          staticClass: _vm._$g(
+                                            "21-" + $31,
+                                            "sc"
+                                          ),
+                                          attrs: { _i: "21-" + $31 }
                                         },
-                                        [_vm._v("Realestate")]
+                                        [_vm._v(_vm._$g("21-" + $31, "t0-0"))]
                                       )
                                     ],
                                     1
@@ -2336,8 +2344,8 @@ var render = function() {
                                   _c(
                                     "div",
                                     {
-                                      staticClass: _vm._$g(28, "sc"),
-                                      attrs: { _i: 28 },
+                                      staticClass: _vm._$g("22-" + $31, "sc"),
+                                      attrs: { _i: "22-" + $31 },
                                       on: {
                                         click: function($event) {
                                           return _vm.$handleViewEvent($event)
@@ -2346,8 +2354,11 @@ var render = function() {
                                     },
                                     [
                                       _c("i", {
-                                        staticClass: _vm._$g(29, "sc"),
-                                        attrs: { "aria-hidden": "true", _i: 29 }
+                                        staticClass: _vm._$g("23-" + $31, "sc"),
+                                        attrs: {
+                                          "aria-hidden": "true",
+                                          _i: "23-" + $31
+                                        }
                                       })
                                     ],
                                     1
@@ -2364,7 +2375,7 @@ var render = function() {
                     ],
                     1
                   )
-                ],
+                }),
                 1
               )
             ],
@@ -2375,10 +2386,10 @@ var render = function() {
       ),
       _c(
         "UniPopup",
-        { ref: "popup", attrs: { _i: 30 } },
+        { ref: "popup", attrs: { _i: 24 } },
         [
           _c("UniPopupShare", {
-            attrs: { _i: 31 },
+            attrs: { _i: 25 },
             on: {
               select: function($event) {
                 return _vm.$handleViewEvent($event)
@@ -2483,7 +2494,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../Programs/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*\n    Home properties\n*/\n#properties {\n  padding-top: 5px;\n}\n#properties .vpost_wrapper {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #616161;\n  font-size: 0.8rem;\n}\n#properties .vpost_wrapper .img-wrapper {\n  padding-right: 5px;\n}\n#properties .vpost_wrapper .title {\n  display: block;\n  font-size: 1rem;\n  margin-bottom: 2px;\n  color: #D6B88B;\n}\n#properties .vpost_wrapper .below_title {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  font-size: .8rem;\n  margin-top: 10px;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n#properties .vpost_wrapper .below_title .share-btn {\n  margin-right: 1em;\n  font-size: 1.5em;\n}\n#properties .vpost_wrapper .row.right {\n  padding-left: 8px;\n}\n#properties .vpost_wrapper .below_title .category {\n  text-decoration: none;\n  color: #fff;\n  background-color: #D6B88B;\n  -webkit-border-radius: 4px;\n          border-radius: 4px;\n  margin-right: 5px;\n  padding: 2px 5px;\n}\n#properties .vpost_wrapper .desc {\n  font-size: 0.8rem;\n}\n#properties .vpost_wrapper .desc p {\n  margin-bottom: 5px;\n}\n#properties .vpost_wrapper .meta-data {\n  padding: 0;\n}\n#properties .vpost_wrapper .meta-data div {\n  display: inline-block;\n}\n#properties .vpost_wrapper .meta-data .fa {\n  color: rgba(0, 0, 0, 0.3);\n}\n#properties .vpost_wrapper .meta-data .comments {\n  margin-left: 10px;\n}\n#properties .categories_wrapper {\n  list-style: none;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-justify-content: space-around;\n          justify-content: space-around;\n  margin-bottom: 10px;\n}\n#properties .categories_wrapper li {\n  color: #fff;\n  background-color: #D6B88B;\n  -webkit-border-radius: 4px;\n          border-radius: 4px;\n  padding: 2px 5px;\n  font-size: .9em;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*\n    Home properties\n*/\n#properties {\n  padding-top: 65px;\n}\n#properties .vpost_wrapper {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  border-bottom: 1px solid #616161;\n  font-size: 0.8rem;\n}\n#properties .vpost_wrapper .img-wrapper {\n  padding-right: 5px;\n}\n#properties .vpost_wrapper .title {\n  display: block;\n  font-size: 1rem;\n  margin-bottom: 2px;\n  color: #D6B88B;\n}\n#properties .vpost_wrapper .below_title {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  font-size: .8rem;\n  margin-top: 10px;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n#properties .vpost_wrapper .below_title .share-btn {\n  margin-right: 1em;\n  font-size: 1.5em;\n}\n#properties .vpost_wrapper .row.right {\n  padding-left: 8px;\n}\n#properties .vpost_wrapper .below_title .category {\n  text-decoration: none;\n  color: #fff;\n  background-color: #D6B88B;\n  -webkit-border-radius: 4px;\n          border-radius: 4px;\n  margin-right: 5px;\n  padding: 2px 5px;\n}\n#properties .vpost_wrapper .desc {\n  font-size: 0.8rem;\n}\n#properties .vpost_wrapper .desc p {\n  margin-bottom: 5px;\n}\n#properties .vpost_wrapper .meta-data {\n  padding: 0;\n}\n#properties .vpost_wrapper .meta-data div {\n  display: inline-block;\n}\n#properties .vpost_wrapper .meta-data .fa {\n  color: rgba(0, 0, 0, 0.3);\n}\n#properties .vpost_wrapper .meta-data .comments {\n  margin-left: 10px;\n}\n#properties .categories_wrapper {\n  list-style: none;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-justify-content: space-around;\n          justify-content: space-around;\n  margin-bottom: 10px;\n}\n#properties .categories_wrapper li {\n  color: #fff;\n  background-color: #D6B88B;\n  -webkit-border-radius: 4px;\n          border-radius: 4px;\n  padding: 2px 5px;\n  font-size: .9em;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

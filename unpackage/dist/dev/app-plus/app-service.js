@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      swiperImg: [// 轮播图图片\n      '../../static/home/1.png',\n      '../../static/home/2.png',\n      '../../static/home/3.png'],\n\n      url: \"https://reservations.travelclick.com/98505?HotelId=98505&languageid=1&nights=1&rooms=1&adults=1&roomtypeid=422118&_ga=2.33644577.1421270210.1615350019-1308944151.1615350019#/datesofstay\",\n      baseurl: \"\",\n      swiperCurrent: 0, // 轮播图index \n      newbee_infolst: [] };\n\n  },\n  onShow: function onShow() {},\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  onShareAppMessage: function onShareAppMessage() {\n    return {\n      title: '欢迎',\n      path: '/pages/index/index' };\n\n  },\n  methods: {\n    target: function target(url) {\n      uni.switchTab({\n        url: url });\n\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaW5kZXgvaW5kZXgudnVlIl0sIm5hbWVzIjpbImRhdGEiLCJzd2lwZXJJbWciLCJ1cmwiLCJiYXNldXJsIiwic3dpcGVyQ3VycmVudCIsIm5ld2JlZV9pbmZvbHN0Iiwib25TaG93Iiwib25Mb2FkIiwiaGVpZ2h0IiwidW5pIiwiZ2V0U3lzdGVtSW5mbyIsInN1Y2Nlc3MiLCJzeXNpbmZvIiwid2luZG93SGVpZ2h0IiwiY29tcGxldGUiLCJjdXJyZW50V2VidmlldyIsIiRzY29wZSIsIiRnZXRBcHBXZWJ2aWV3Iiwic2V0VGltZW91dCIsInd2IiwiY2hpbGRyZW4iLCJzZXRTdHlsZSIsInRvcCIsInNjYWxhYmxlIiwib25TaGFyZUFwcE1lc3NhZ2UiLCJ0aXRsZSIsInBhdGgiLCJtZXRob2RzIiwidGFyZ2V0Iiwic3dpdGNoVGFiIl0sIm1hcHBpbmdzIjoid0ZBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRWU7QUFDZEEsTUFEYyxrQkFDUDtBQUNOLFdBQU87QUFDTkMsZUFBUyxFQUFFLENBQUU7QUFDWiwrQkFEVTtBQUVWLCtCQUZVO0FBR1YsK0JBSFUsQ0FETDs7QUFNTkMsU0FBRyxFQUFDLDJMQU5FO0FBT05DLGFBQU8sRUFBRSxFQVBIO0FBUU5DLG1CQUFhLEVBQUUsQ0FSVCxFQVFZO0FBQ2xCQyxvQkFBYyxFQUFFLEVBVFYsRUFBUDs7QUFXQSxHQWJhO0FBY2RDLFFBZGMsb0JBY0wsQ0FBRSxDQWRHO0FBZWRDLFFBZmMsb0JBZU47QUFDUCxRQUFJQyxNQUFNLEdBQUMsQ0FBWCxDQURPLENBQ007QUFDYkMsT0FBRyxDQUFDQyxhQUFKLENBQWtCO0FBQ2pCO0FBQ0FDLGFBQU8sRUFBRSxpQkFBQ0MsT0FBRCxFQUFhO0FBQ3RCSixjQUFNLEdBQUdJLE9BQU8sQ0FBQ0MsWUFBakIsQ0FEc0IsQ0FDUTtBQUM5QixPQUppQjtBQUtsQkMsY0FBUSxFQUFFLG9CQUFNO0FBQ1gsT0FOYSxFQUFsQjs7QUFRQSxRQUFJQyxjQUFjLEdBQUcsS0FBS0MsTUFBTCxDQUFZQyxjQUFaLEVBQXJCLENBVk8sQ0FVMkM7QUFDbERDLGNBQVUsQ0FBQyxZQUFXO0FBQ3BCLFVBQUlDLEVBQUUsR0FBR0osY0FBYyxDQUFDSyxRQUFmLEdBQTBCLENBQTFCLENBQVQ7QUFDQUQsUUFBRSxDQUFDRSxRQUFILENBQVksRUFBQztBQUNiQyxXQUFHLEVBQUUsRUFETyxFQUNKO0FBQ1JkLGNBQU0sRUFBQ0EsTUFGSyxFQUVFOztBQUVkZSxnQkFBUSxFQUFDLEtBSkcsQ0FJUTtBQUpSLE9BQVo7QUFNRCxLQVJTLEVBUVAsSUFSTyxDQUFWLENBWE8sQ0FtQkU7QUFDVCxHQW5DYTtBQW9DZEMsbUJBcENjLCtCQW9DTTtBQUNuQixXQUFPO0FBQ05DLFdBQUssRUFBRSxJQUREO0FBRU5DLFVBQUksRUFBRSxvQkFGQSxFQUFQOztBQUlBLEdBekNhO0FBMENkQyxTQUFPLEVBQUU7QUFDUkMsVUFEUSxrQkFDRDFCLEdBREMsRUFDSTtBQUNYTyxTQUFHLENBQUNvQixTQUFKLENBQWM7QUFDYjNCLFdBQUcsRUFBSEEsR0FEYSxFQUFkOztBQUdBLEtBTE8sRUExQ0ssRSIsImZpbGUiOiI2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cblxuZXhwb3J0IGRlZmF1bHQge1xuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHRzd2lwZXJJbWc6IFsgLy8g6L2u5pKt5Zu+5Zu+54mHXG5cdFx0XHRcdCcuLi8uLi9zdGF0aWMvaG9tZS8xLnBuZycsXG5cdFx0XHRcdCcuLi8uLi9zdGF0aWMvaG9tZS8yLnBuZycsXG5cdFx0XHRcdCcuLi8uLi9zdGF0aWMvaG9tZS8zLnBuZycsIFxuXHRcdFx0XSxcblx0XHRcdHVybDpcImh0dHBzOi8vcmVzZXJ2YXRpb25zLnRyYXZlbGNsaWNrLmNvbS85ODUwNT9Ib3RlbElkPTk4NTA1Jmxhbmd1YWdlaWQ9MSZuaWdodHM9MSZyb29tcz0xJmFkdWx0cz0xJnJvb210eXBlaWQ9NDIyMTE4Jl9nYT0yLjMzNjQ0NTc3LjE0MjEyNzAyMTAuMTYxNTM1MDAxOS0xMzA4OTQ0MTUxLjE2MTUzNTAwMTkjL2RhdGVzb2ZzdGF5XCIsXG5cdFx0XHRiYXNldXJsOiBcIlwiLFxuXHRcdFx0c3dpcGVyQ3VycmVudDogMCwgLy8g6L2u5pKt5Zu+aW5kZXggXG5cdFx0XHRuZXdiZWVfaW5mb2xzdDogW11cblx0XHR9O1xuXHR9LFxuXHRvblNob3coKSB7fSxcblx0b25Mb2FkKCl7XG5cdFx0dmFyIGhlaWdodD0wOy8v5a6a5LmJ5Yqo5oCB55qE6auY5bqm5Y+Y6YeP77yM5aaC6auY5bqm5Li65a6a5YC877yM5Y+v5Lul55u05o6l5YaZXG5cdFx0dW5pLmdldFN5c3RlbUluZm8oe1xuXHRcdFx0Ly/miJDlip/ojrflj5bnmoTlm57osIPlh73mlbDvvIzov5Tlm57lgLzkuLrns7vnu5/kv6Hmga9cblx0XHRcdHN1Y2Nlc3M6IChzeXNpbmZvKSA9PiB7XG5cdFx0XHRoZWlnaHQgPSBzeXNpbmZvLndpbmRvd0hlaWdodDsvL+iHquihjOS/ruaUue+8jOiHquW3semcgOimgeeahOmrmOW6psKg5q2k5aSE5aaC5bqV6YOo5pyJ5YW25LuW5YaF5a6577yM5Y+v5Lul55u05o6lLS0tKC01MCnov5nnp41cblx0XHR9LFxuXHRcdGNvbXBsZXRlOiAoKSA9PiB7XG5cdFx0ICAgIH1cblx0XHR9KTtcblx0XHR2YXIgY3VycmVudFdlYnZpZXcgPSB0aGlzLiRzY29wZS4kZ2V0QXBwV2VidmlldygpOy8v6I635Y+W5b2T5YmNd2ViLXZpZXdcblx0XHRzZXRUaW1lb3V0KGZ1bmN0aW9uKCkge1xuXHRcdFx0XHR2YXIgd3YgPSBjdXJyZW50V2Vidmlldy5jaGlsZHJlbigpWzBdO1xuXHRcdFx0XHR3di5zZXRTdHlsZSh7Ly/orr7nva53ZWItdmlld+i3neemu+mhtumDqOeahOi3neemu+S7peWPiuiHquW3seeahOmrmOW6pu+8jOWNleS9jeS4unB4XG5cdFx0XHRcdHRvcDogNjgsLy/mraTlpITmmK/ot53nprvpobbpg6jnmoTpq5jluqbvvIzlupTor6XmmK/kvaDpobXpnaLnmoTlpLTpg6hcblx0XHRcdFx0aGVpZ2h0OmhlaWdodCwvL3dlYnZpZXfnmoTpq5jluqZcblx0XHRcdFx0XG5cdFx0XHRcdHNjYWxhYmxlOmZhbHNlwqAgwqAgwqAgLy93ZWJ2aWV355qE6aG16Z2i5piv5ZCm5Y+v5Lul57yp5pS+77yM5Y+M5oyH5pS+5aSn57yp5bCPXG5cdFx0XHR9KVxuXHRcdH0sIDEwMDApOy8v5aaC6aG16Z2i5Yid5aeL5YyW6LCD55So6ZyA6KaB5YaZ5bu26L+fIFxuXHR9LFxuXHRvblNoYXJlQXBwTWVzc2FnZSgpIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0dGl0bGU6ICfmrKLov44nLFxuXHRcdFx0cGF0aDogJy9wYWdlcy9pbmRleC9pbmRleCdcblx0XHR9XG5cdH0sXG5cdG1ldGhvZHM6IHtcblx0XHR0YXJnZXQodXJsKSB7XG5cdFx0XHR1bmkuc3dpdGNoVGFiKHtcblx0XHRcdFx0dXJsXG5cdFx0XHR9KVxuXHRcdH0sXG5cdH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///6\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      swiperImg: [// 轮播图图片\n      '../../static/home/1.png',\n      '../../static/home/2.png',\n      '../../static/home/3.png'],\n\n      url: \"https://reservations.travelclick.com/98505?HotelId=98505&languageid=1&nights=1&rooms=1&adults=1&roomtypeid=422118&_ga=2.33644577.1421270210.1615350019-1308944151.1615350019#/datesofstay\",\n      baseurl: \"\",\n      swiperCurrent: 0, // 轮播图index \n      newbee_infolst: [] };\n\n  },\n  onShow: function onShow() {},\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  onShareAppMessage: function onShareAppMessage() {\n    return {\n      title: '欢迎',\n      path: '/pages/index/index' };\n\n  },\n  methods: {\n    target: function target(url) {\n      uni.switchTab({\n        url: url });\n\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaW5kZXgvaW5kZXgudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBaUJBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0E7QUFDQSwrQkFEQTtBQUVBLCtCQUZBO0FBR0EsK0JBSEEsQ0FEQTs7QUFNQSxzTUFOQTtBQU9BLGlCQVBBO0FBUUEsc0JBUkEsRUFRQTtBQUNBLHdCQVRBOztBQVdBLEdBYkE7QUFjQSxRQWRBLG9CQWNBLEVBZEE7QUFlQSxRQWZBLG9CQWVBO0FBQ0EsbUJBREEsQ0FDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNDQURBLENBQ0E7QUFDQSxPQUpBO0FBS0E7QUFDQSxPQU5BOztBQVFBLHNEQVZBLENBVUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQURBLEVBQ0E7QUFDQSxzQkFGQSxFQUVBOztBQUVBLHVCQUpBLENBSUE7QUFKQTtBQU1BLEtBUkEsRUFRQSxJQVJBLEVBWEEsQ0FtQkE7QUFDQSxHQW5DQTtBQW9DQSxtQkFwQ0EsK0JBb0NBO0FBQ0E7QUFDQSxpQkFEQTtBQUVBLGdDQUZBOztBQUlBLEdBekNBO0FBMENBO0FBQ0EsVUFEQSxrQkFDQSxHQURBLEVBQ0E7QUFDQTtBQUNBLGdCQURBOztBQUdBLEtBTEEsRUExQ0EsRSIsImZpbGUiOiI2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxyXG5cdFxyXG5cdDx2aWV3IGNsYXNzPVwicmYtaW5kZXhcIj5cclxuXHRcdFxyXG5cdFx0IDx3ZWItdmlldyBpZD1cIm1hcENvbnRhaW5lclwiIDpzcmM9XCJ1cmxcIiAgPjwvd2ViLXZpZXc+XHJcblx0XHQ8IS0tIOi9ruaSreWbviAtLT5cclxuXHRcdDwhLS1cclxuXHRcdDxzd2lwZXIgOmF1dG9wbGF5PVwidHJ1ZVwiIGluZGljYXRvci1kb3RzIGRpc3BsYXktbXVsdGlwbGUtaXRlbXMgOmNpcmN1bGFyPSd0cnVlJz5cclxuXHRcdFx0PHN3aXBlci1pdGVtIHYtZm9yPVwiKGl0ZW0saW5kZXgpIGluIHN3aXBlckltZ1wiIDprZXk9XCJpbmRleFwiPlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwic3dpcGVyLWl0ZW1cIj5cclxuXHRcdFx0XHRcdDxpbWFnZSA6c3JjPVwiaXRlbVwiIGxhenktbG9hZCBtb2RlPVwiaGVpZ2h0Rml4XCIgLz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDwvc3dpcGVyLWl0ZW0+XHJcblx0XHQ8L3N3aXBlcj4gLS0+XHJcblx0PC92aWV3PlxyXG48L3RlbXBsYXRlPlxyXG48c2NyaXB0PlxyXG5cdGV4cG9ydCBkZWZhdWx0IHtcclxuXHRcdGRhdGEoKSB7XHJcblx0XHRcdHJldHVybiB7XHJcblx0XHRcdFx0c3dpcGVySW1nOiBbIC8vIOi9ruaSreWbvuWbvueJh1xyXG5cdFx0XHRcdFx0Jy4uLy4uL3N0YXRpYy9ob21lLzEucG5nJyxcclxuXHRcdFx0XHRcdCcuLi8uLi9zdGF0aWMvaG9tZS8yLnBuZycsXHJcblx0XHRcdFx0XHQnLi4vLi4vc3RhdGljL2hvbWUvMy5wbmcnLCBcclxuXHRcdFx0XHRdLFxyXG5cdFx0XHRcdHVybDpcImh0dHBzOi8vcmVzZXJ2YXRpb25zLnRyYXZlbGNsaWNrLmNvbS85ODUwNT9Ib3RlbElkPTk4NTA1Jmxhbmd1YWdlaWQ9MSZuaWdodHM9MSZyb29tcz0xJmFkdWx0cz0xJnJvb210eXBlaWQ9NDIyMTE4Jl9nYT0yLjMzNjQ0NTc3LjE0MjEyNzAyMTAuMTYxNTM1MDAxOS0xMzA4OTQ0MTUxLjE2MTUzNTAwMTkjL2RhdGVzb2ZzdGF5XCIsXHJcblx0XHRcdFx0YmFzZXVybDogXCJcIixcclxuXHRcdFx0XHRzd2lwZXJDdXJyZW50OiAwLCAvLyDova7mkq3lm75pbmRleCBcclxuXHRcdFx0XHRuZXdiZWVfaW5mb2xzdDogW11cclxuXHRcdFx0fTtcclxuXHRcdH0sXHJcblx0XHRvblNob3coKSB7fSxcclxuXHRcdG9uTG9hZCgpe1xyXG5cdFx0XHR2YXIgaGVpZ2h0PTA7Ly/lrprkuYnliqjmgIHnmoTpq5jluqblj5jph4/vvIzlpoLpq5jluqbkuLrlrprlgLzvvIzlj6/ku6Xnm7TmjqXlhplcclxuXHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xyXG5cdFx0XHRcdC8v5oiQ5Yqf6I635Y+W55qE5Zue6LCD5Ye95pWw77yM6L+U5Zue5YC85Li657O757uf5L+h5oGvXHJcblx0XHRcdFx0c3VjY2VzczogKHN5c2luZm8pID0+IHtcclxuXHRcdFx0XHRoZWlnaHQgPSBzeXNpbmZvLndpbmRvd0hlaWdodDsvL+iHquihjOS/ruaUue+8jOiHquW3semcgOimgeeahOmrmOW6psKg5q2k5aSE5aaC5bqV6YOo5pyJ5YW25LuW5YaF5a6577yM5Y+v5Lul55u05o6lLS0tKC01MCnov5nnp41cclxuXHRcdFx0fSxcclxuXHRcdFx0Y29tcGxldGU6ICgpID0+IHtcclxuXHRcdFx0ICAgIH1cclxuXHRcdFx0fSk7XHJcblx0XHRcdHZhciBjdXJyZW50V2VidmlldyA9IHRoaXMuJHNjb3BlLiRnZXRBcHBXZWJ2aWV3KCk7Ly/ojrflj5blvZPliY13ZWItdmlld1xyXG5cdFx0XHRzZXRUaW1lb3V0KGZ1bmN0aW9uKCkge1xyXG5cdFx0XHRcdFx0dmFyIHd2ID0gY3VycmVudFdlYnZpZXcuY2hpbGRyZW4oKVswXTtcclxuXHRcdFx0XHRcdHd2LnNldFN0eWxlKHsvL+iuvue9rndlYi12aWV36Led56a76aG26YOo55qE6Led56a75Lul5Y+K6Ieq5bex55qE6auY5bqm77yM5Y2V5L2N5Li6cHhcclxuXHRcdFx0XHRcdHRvcDogNjgsLy/mraTlpITmmK/ot53nprvpobbpg6jnmoTpq5jluqbvvIzlupTor6XmmK/kvaDpobXpnaLnmoTlpLTpg6hcclxuXHRcdFx0XHRcdGhlaWdodDpoZWlnaHQsLy93ZWJ2aWV355qE6auY5bqmXHJcblx0XHRcdFx0XHRcclxuXHRcdFx0XHRcdHNjYWxhYmxlOmZhbHNlwqAgwqAgwqAgLy93ZWJ2aWV355qE6aG16Z2i5piv5ZCm5Y+v5Lul57yp5pS+77yM5Y+M5oyH5pS+5aSn57yp5bCPXHJcblx0XHRcdFx0fSlcclxuXHRcdFx0fSwgMTAwMCk7Ly/lpoLpobXpnaLliJ3lp4vljJbosIPnlKjpnIDopoHlhpnlu7bov58gXHJcblx0XHR9LFxyXG5cdFx0b25TaGFyZUFwcE1lc3NhZ2UoKSB7XHJcblx0XHRcdHJldHVybiB7XHJcblx0XHRcdFx0dGl0bGU6ICfmrKLov44nLFxyXG5cdFx0XHRcdHBhdGg6ICcvcGFnZXMvaW5kZXgvaW5kZXgnXHJcblx0XHRcdH1cclxuXHRcdH0sXHJcblx0XHRtZXRob2RzOiB7XHJcblx0XHRcdHRhcmdldCh1cmwpIHtcclxuXHRcdFx0XHR1bmkuc3dpdGNoVGFiKHtcclxuXHRcdFx0XHRcdHVybFxyXG5cdFx0XHRcdH0pXHJcblx0XHRcdH0sXHJcblx0XHR9XHJcblx0fVxyXG48L3NjcmlwdD5cclxuXHJcbjxzdHlsZSBsYW5nPVwic2Nzc1wiIHNjb3BlZD5cclxuXHQucmYtaW5kZXgge1xyXG5cdFx0dGV4dC1hbGlnbjogY2VudGVyOyBcclxuXHRcdFxyXG4gICAgICAudG9wbG9nb3tcclxuXHRcdCAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cdFx0ICBib3R0b206IDBweDtcclxuXHRcdCAgaGVpZ2h0OiAxMjBweDtcclxuXHRcdCAgd2lkdGg6IDEyMHB4O1xyXG5cdCAgfVxyXG5cdFx0Lyrova7mkq3lm74qL1xyXG5cdFx0c3dpcGVyIHtcclxuXHRcdFx0aGVpZ2h0OiAxMDB2aDtcclxuXHRcdFx0d2lkdGg6IDEwMCU7XHJcblxyXG5cdFx0XHQuc3dpcGVyLWl0ZW0ge1xyXG5cdFx0XHRcdGhlaWdodDogMTAwJTtcclxuXHRcdFx0fVxyXG5cdFx0XHRpbWFnZXtcclxuXHRcdFx0XHRoZWlnaHQ6IDEwMCU7XHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHR9XHJcbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///6\n");
 
 /***/ }),
 /* 7 */
@@ -1183,7 +1183,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      url: \"http://remi.net.au/gwa-app/\" };\n\n  },\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  methods: {} };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvY29tbXVuaXR5L2NvbW11bml0eS52dWUiXSwibmFtZXMiOlsiZGF0YSIsInVybCIsIm9uTG9hZCIsImhlaWdodCIsInVuaSIsImdldFN5c3RlbUluZm8iLCJzdWNjZXNzIiwic3lzaW5mbyIsIndpbmRvd0hlaWdodCIsImNvbXBsZXRlIiwiY3VycmVudFdlYnZpZXciLCIkc2NvcGUiLCIkZ2V0QXBwV2VidmlldyIsInNldFRpbWVvdXQiLCJ3diIsImNoaWxkcmVuIiwic2V0U3R5bGUiLCJ0b3AiLCJzY2FsYWJsZSIsIm1ldGhvZHMiXSwibWFwcGluZ3MiOiJ3RkFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRWU7QUFDZEEsTUFEYyxrQkFDUDtBQUNOLFdBQU87QUFDTkMsU0FBRyxFQUFDLDZCQURFLEVBQVA7O0FBR0EsR0FMYTtBQU1kQyxRQU5jLG9CQU1OO0FBQ1AsUUFBSUMsTUFBTSxHQUFDLENBQVgsQ0FETyxDQUNNO0FBQ2JDLE9BQUcsQ0FBQ0MsYUFBSixDQUFrQjtBQUNqQjtBQUNBQyxhQUFPLEVBQUUsaUJBQUNDLE9BQUQsRUFBYTtBQUN0QkosY0FBTSxHQUFHSSxPQUFPLENBQUNDLFlBQWpCLENBRHNCLENBQ1E7QUFDOUIsT0FKaUI7QUFLbEJDLGNBQVEsRUFBRSxvQkFBTTtBQUNYLE9BTmEsRUFBbEI7O0FBUUEsUUFBSUMsY0FBYyxHQUFHLEtBQUtDLE1BQUwsQ0FBWUMsY0FBWixFQUFyQixDQVZPLENBVTJDO0FBQ2xEQyxjQUFVLENBQUMsWUFBVztBQUNwQixVQUFJQyxFQUFFLEdBQUdKLGNBQWMsQ0FBQ0ssUUFBZixHQUEwQixDQUExQixDQUFUO0FBQ0FELFFBQUUsQ0FBQ0UsUUFBSCxDQUFZLEVBQUM7QUFDYkMsV0FBRyxFQUFFLEVBRE8sRUFDSjtBQUNSZCxjQUFNLEVBQUNBLE1BRkssRUFFRTs7QUFFZGUsZ0JBQVEsRUFBQyxLQUpHLENBSVE7QUFKUixPQUFaO0FBTUQsS0FSUyxFQVFQLElBUk8sQ0FBVixDQVhPLENBbUJFO0FBQ1QsR0ExQmE7QUEyQmRDLFNBQU8sRUFBRSxFQTNCSyxFIiwiZmlsZSI6IjM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuXG5leHBvcnQgZGVmYXVsdCB7XG5cdGRhdGEoKSB7XG5cdFx0cmV0dXJuIHtcblx0XHRcdHVybDpcImh0dHA6Ly9yZW1pLm5ldC5hdS9nd2EtYXBwL1wiXG5cdFx0fVxuXHR9LFxuXHRvbkxvYWQoKXtcblx0XHR2YXIgaGVpZ2h0PTA7Ly/lrprkuYnliqjmgIHnmoTpq5jluqblj5jph4/vvIzlpoLpq5jluqbkuLrlrprlgLzvvIzlj6/ku6Xnm7TmjqXlhplcblx0XHR1bmkuZ2V0U3lzdGVtSW5mbyh7XG5cdFx0XHQvL+aIkOWKn+iOt+WPlueahOWbnuiwg+WHveaVsO+8jOi/lOWbnuWAvOS4uuezu+e7n+S/oeaBr1xuXHRcdFx0c3VjY2VzczogKHN5c2luZm8pID0+IHtcblx0XHRcdGhlaWdodCA9IHN5c2luZm8ud2luZG93SGVpZ2h0Oy8v6Ieq6KGM5L+u5pS577yM6Ieq5bex6ZyA6KaB55qE6auY5bqmwqDmraTlpITlpoLlupXpg6jmnInlhbbku5blhoXlrrnvvIzlj6/ku6Xnm7TmjqUtLS0oLTUwKei/meenjVxuXHRcdH0sXG5cdFx0Y29tcGxldGU6ICgpID0+IHtcblx0XHQgICAgfVxuXHRcdH0pO1xuXHRcdHZhciBjdXJyZW50V2VidmlldyA9IHRoaXMuJHNjb3BlLiRnZXRBcHBXZWJ2aWV3KCk7Ly/ojrflj5blvZPliY13ZWItdmlld1xuXHRcdHNldFRpbWVvdXQoZnVuY3Rpb24oKSB7XG5cdFx0XHRcdHZhciB3diA9IGN1cnJlbnRXZWJ2aWV3LmNoaWxkcmVuKClbMF07XG5cdFx0XHRcdHd2LnNldFN0eWxlKHsvL+iuvue9rndlYi12aWV36Led56a76aG26YOo55qE6Led56a75Lul5Y+K6Ieq5bex55qE6auY5bqm77yM5Y2V5L2N5Li6cHhcblx0XHRcdFx0dG9wOiA2OCwvL+atpOWkhOaYr+i3neemu+mhtumDqOeahOmrmOW6pu+8jOW6lOivpeaYr+S9oOmhtemdoueahOWktOmDqFxuXHRcdFx0XHRoZWlnaHQ6aGVpZ2h0LC8vd2Vidmlld+eahOmrmOW6plxuXHRcdFx0XHRcblx0XHRcdFx0c2NhbGFibGU6ZmFsc2XCoCDCoCDCoCAvL3dlYnZpZXfnmoTpobXpnaLmmK/lkKblj6/ku6XnvKnmlL7vvIzlj4zmjIfmlL7lpKfnvKnlsI9cblx0XHRcdH0pXG5cdFx0fSwgMTAwMCk7Ly/lpoLpobXpnaLliJ3lp4vljJbosIPnlKjpnIDopoHlhpnlu7bov58gXG5cdH0sXG5cdG1ldGhvZHM6IHsgXG5cdH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///35\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      url: \"http://remi.net.au/gwa-app/\" };\n\n  },\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  methods: {} };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvY29tbXVuaXR5L2NvbW11bml0eS52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQU9BO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0Esd0NBREE7O0FBR0EsR0FMQTtBQU1BLFFBTkEsb0JBTUE7QUFDQSxtQkFEQSxDQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0NBREEsQ0FDQTtBQUNBLE9BSkE7QUFLQTtBQUNBLE9BTkE7O0FBUUEsc0RBVkEsQ0FVQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBREEsRUFDQTtBQUNBLHNCQUZBLEVBRUE7O0FBRUEsdUJBSkEsQ0FJQTtBQUpBO0FBTUEsS0FSQSxFQVFBLElBUkEsRUFYQSxDQW1CQTtBQUNBLEdBMUJBO0FBMkJBLGFBM0JBLEUiLCJmaWxlIjoiMzUuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG5cdDx2aWV3PlxuXHRcdCA8d2ViLXZpZXcgaWQ9XCJtYXBDb250YWluZXJcIiA6c3JjPVwidXJsXCIgID48L3dlYi12aWV3PlxuXHQ8L3ZpZXc+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0ZGF0YSgpIHtcblx0XHRcdHJldHVybiB7XG5cdFx0XHRcdHVybDpcImh0dHA6Ly9yZW1pLm5ldC5hdS9nd2EtYXBwL1wiXG5cdFx0XHR9XG5cdFx0fSxcclxuXHRcdG9uTG9hZCgpe1xyXG5cdFx0XHR2YXIgaGVpZ2h0PTA7Ly/lrprkuYnliqjmgIHnmoTpq5jluqblj5jph4/vvIzlpoLpq5jluqbkuLrlrprlgLzvvIzlj6/ku6Xnm7TmjqXlhplcclxuXHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xyXG5cdFx0XHRcdC8v5oiQ5Yqf6I635Y+W55qE5Zue6LCD5Ye95pWw77yM6L+U5Zue5YC85Li657O757uf5L+h5oGvXHJcblx0XHRcdFx0c3VjY2VzczogKHN5c2luZm8pID0+IHtcclxuXHRcdFx0XHRoZWlnaHQgPSBzeXNpbmZvLndpbmRvd0hlaWdodDsvL+iHquihjOS/ruaUue+8jOiHquW3semcgOimgeeahOmrmOW6psKg5q2k5aSE5aaC5bqV6YOo5pyJ5YW25LuW5YaF5a6577yM5Y+v5Lul55u05o6lLS0tKC01MCnov5nnp41cclxuXHRcdFx0fSxcclxuXHRcdFx0Y29tcGxldGU6ICgpID0+IHtcclxuXHRcdFx0ICAgIH1cclxuXHRcdFx0fSk7XHJcblx0XHRcdHZhciBjdXJyZW50V2VidmlldyA9IHRoaXMuJHNjb3BlLiRnZXRBcHBXZWJ2aWV3KCk7Ly/ojrflj5blvZPliY13ZWItdmlld1xyXG5cdFx0XHRzZXRUaW1lb3V0KGZ1bmN0aW9uKCkge1xyXG5cdFx0XHRcdFx0dmFyIHd2ID0gY3VycmVudFdlYnZpZXcuY2hpbGRyZW4oKVswXTtcclxuXHRcdFx0XHRcdHd2LnNldFN0eWxlKHsvL+iuvue9rndlYi12aWV36Led56a76aG26YOo55qE6Led56a75Lul5Y+K6Ieq5bex55qE6auY5bqm77yM5Y2V5L2N5Li6cHhcclxuXHRcdFx0XHRcdHRvcDogNjgsLy/mraTlpITmmK/ot53nprvpobbpg6jnmoTpq5jluqbvvIzlupTor6XmmK/kvaDpobXpnaLnmoTlpLTpg6hcclxuXHRcdFx0XHRcdGhlaWdodDpoZWlnaHQsLy93ZWJ2aWV355qE6auY5bqmXHJcblx0XHRcdFx0XHRcclxuXHRcdFx0XHRcdHNjYWxhYmxlOmZhbHNlwqAgwqAgwqAgLy93ZWJ2aWV355qE6aG16Z2i5piv5ZCm5Y+v5Lul57yp5pS+77yM5Y+M5oyH5pS+5aSn57yp5bCPXHJcblx0XHRcdFx0fSlcclxuXHRcdFx0fSwgMTAwMCk7Ly/lpoLpobXpnaLliJ3lp4vljJbosIPnlKjpnIDopoHlhpnlu7bov58gXHJcblx0XHR9LFxuXHRcdG1ldGhvZHM6IHsgXG5cdFx0fVxuXHR9XG48L3NjcmlwdD5cblxuPHN0eWxlPlxuXG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///35\n");
 
 /***/ }),
 /* 36 */
@@ -1251,108 +1251,255 @@ var render = function() {
                 attrs: { _i: 3 }
               },
               [
-                _c("li", [_c("a", {})]),
-                _c("li", [_c("a", {})]),
-                _c("li", [_c("a", {})]),
-                _c("li", [_c("a", {})]),
-                _c("li", [_c("a", {})])
-              ]
+                _c("li", [
+                  _c("a", {
+                    attrs: { _i: 5 },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return (function() {
+                          return _vm.toggleCategory(null)
+                        })($event)
+                      }
+                    }
+                  })
+                ]),
+                _vm._l(_vm._$s(6, "f", { forItems: _vm.categories }), function(
+                  cat,
+                  $10,
+                  $20,
+                  $30
+                ) {
+                  return _vm._$s("6-" + $30, "i", cat.name !== "Uncategorised")
+                    ? _c(
+                        "li",
+                        {
+                          key: _vm._$s(6, "f", { forIndex: $20, key: cat.name })
+                        },
+                        [
+                          _c(
+                            "a",
+                            {
+                              attrs: { _i: "7-" + $30 },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  return (function() {
+                                    return _vm.toggleCategory(cat.id)
+                                  })($event)
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                _vm._$s("7-" + $30, "t0-0", _vm._s(cat.name))
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                })
+              ],
+              2
             ),
             _c(
               "div",
               {
-                staticClass: _vm._$s(14, "sc", "property-posts"),
-                attrs: { _i: 14 }
+                staticClass: _vm._$s(8, "sc", "property-posts"),
+                attrs: { _i: 8 }
               },
-              [
-                _c(
+              _vm._l(_vm._$s(9, "f", { forItems: _vm.projects }), function(
+                project,
+                $11,
+                $21,
+                $31
+              ) {
+                return _c(
                   "div",
                   {
+                    key: _vm._$s(9, "f", { forIndex: $21, key: project.id }),
                     staticClass: _vm._$s(
-                      15,
+                      "9-" + $31,
                       "sc",
                       "row align-items-center vpost_wrapper"
                     ),
-                    attrs: { _i: 15 }
+                    attrs: { _i: "9-" + $31 }
                   },
                   [
                     _c(
                       "div",
                       {
                         staticClass: _vm._$s(
-                          16,
+                          "10-" + $31,
                           "sc",
                           "col-5 pe-0 img-wrapper"
                         ),
-                        attrs: { _i: 16 }
+                        attrs: { _i: "10-" + $31 }
                       },
-                      [_c("a", {}, [_c("img", { attrs: { _i: 18 } })])]
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: _vm._$s(
+                                "11-" + $31,
+                                "a-href",
+                                project.link
+                              ),
+                              _i: "11-" + $31
+                            }
+                          },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: _vm._$s(
+                                  "12-" + $31,
+                                  "a-src",
+                                  project.fimg_url
+                                ),
+                                alt: _vm._$s(
+                                  "12-" + $31,
+                                  "a-alt",
+                                  project.title.rendered
+                                ),
+                                _i: "12-" + $31
+                              }
+                            })
+                          ]
+                        )
+                      ]
                     ),
                     _c(
                       "div",
                       {
-                        staticClass: _vm._$s(19, "sc", "col-7"),
-                        attrs: { _i: 19 }
+                        staticClass: _vm._$s("13-" + $31, "sc", "col-7"),
+                        attrs: { _i: "13-" + $31 }
                       },
                       [
                         _c(
                           "div",
                           {
-                            staticClass: _vm._$s(20, "sc", "row right"),
-                            attrs: { _i: 20 }
+                            staticClass: _vm._$s(
+                              "14-" + $31,
+                              "sc",
+                              "row right"
+                            ),
+                            attrs: { _i: "14-" + $31 }
                           },
                           [
                             _c(
                               "div",
                               {
-                                staticClass: _vm._$s(21, "sc", "col-12 ps-0"),
-                                attrs: { _i: 21 }
+                                staticClass: _vm._$s(
+                                  "15-" + $31,
+                                  "sc",
+                                  "col-12 ps-0"
+                                ),
+                                attrs: { _i: "15-" + $31 }
                               },
                               [
                                 _c("a", {}, [
-                                  _c("span", {
-                                    staticClass: _vm._$s(23, "sc", "title"),
-                                    attrs: { _i: 23 }
-                                  })
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: _vm._$s(
+                                        "17-" + $31,
+                                        "sc",
+                                        "title"
+                                      ),
+                                      attrs: { _i: "17-" + $31 }
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._$s(
+                                          "17-" + $31,
+                                          "t0-0",
+                                          _vm._s(project.title.rendered)
+                                        )
+                                      )
+                                    ]
+                                  )
                                 ])
                               ]
                             ),
-                            _c("div", {
-                              staticClass: _vm._$s(24, "sc", "col-12 p-0 desc"),
-                              attrs: { _i: 24 }
-                            }),
                             _c(
                               "div",
                               {
                                 staticClass: _vm._$s(
-                                  25,
+                                  "18-" + $31,
+                                  "sc",
+                                  "col-12 p-0 desc"
+                                ),
+                                attrs: { _i: "18-" + $31 }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._$s(
+                                    "18-" + $31,
+                                    "t0-0",
+                                    _vm._s(
+                                      _vm.limitChars(project.excerpt.rendered)
+                                    )
+                                  )
+                                )
+                              ]
+                            ),
+                            _c(
+                              "div",
+                              {
+                                staticClass: _vm._$s(
+                                  "19-" + $31,
                                   "sc",
                                   "below_title p-0 d-flex justify-content-between align-items-center"
                                 ),
-                                attrs: { _i: 25 }
+                                attrs: { _i: "19-" + $31 }
                               },
                               [
                                 _c("div", [
-                                  _c("span", {
-                                    staticClass: _vm._$s(27, "sc", "category"),
-                                    attrs: { _i: 27 }
-                                  })
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: _vm._$s(
+                                        "21-" + $31,
+                                        "sc",
+                                        "category"
+                                      ),
+                                      attrs: { _i: "21-" + $31 }
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._$s(
+                                          "21-" + $31,
+                                          "t0-0",
+                                          _vm._s(
+                                            project._embedded["wp:term"][0][0]
+                                              .name
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  )
                                 ]),
                                 _c(
                                   "div",
                                   {
-                                    staticClass: _vm._$s(28, "sc", "share-btn"),
-                                    attrs: { _i: 28 },
+                                    staticClass: _vm._$s(
+                                      "22-" + $31,
+                                      "sc",
+                                      "share-btn"
+                                    ),
+                                    attrs: { _i: "22-" + $31 },
                                     on: { click: _vm.handleClick }
                                   },
                                   [
                                     _c("i", {
                                       staticClass: _vm._$s(
-                                        29,
+                                        "23-" + $31,
                                         "sc",
                                         "fa fa-share-square-o"
                                       ),
-                                      attrs: { _i: 29 }
+                                      attrs: { _i: "23-" + $31 }
                                     })
                                   ]
                                 )
@@ -1364,16 +1511,17 @@ var render = function() {
                     )
                   ]
                 )
-              ]
+              }),
+              0
             )
           ])
         ]
       ),
       _c(
         "UniPopup",
-        { ref: "popup", attrs: { type: "share", _i: 30 } },
+        { ref: "popup", attrs: { type: "share", _i: 24 } },
         [
-          _c("UniPopupShare", { attrs: { _i: 31 }, on: { select: _vm.select } })
+          _c("UniPopupShare", { attrs: { _i: 25 }, on: { select: _vm.select } })
         ],
         1
       )
@@ -1407,7 +1555,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniPopup = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 11));\nvar _uniPopupShare = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup-share/uni-popup-share.vue */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default = { components: { UniPopup: _uniPopup.default, UniPopupShare: _uniPopupShare.default }, data: function data() {return {};}, methods: { handleClick: function handleClick() {this.$refs.popup.open();}, select: function select(_ref) {var item = _ref.item,index = _ref.index;__f__(\"log\", 'selected social platform: ', item, index, \" at pages/services/services.vue:65\");} } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 30)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvc2VydmljZXMvc2VydmljZXMudnVlIl0sIm5hbWVzIjpbImNvbXBvbmVudHMiLCJVbmlQb3B1cCIsIlVuaVBvcHVwU2hhcmUiLCJkYXRhIiwibWV0aG9kcyIsImhhbmRsZUNsaWNrIiwiJHJlZnMiLCJwb3B1cCIsIm9wZW4iLCJzZWxlY3QiLCJpdGVtIiwiaW5kZXgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0NBO0FBQ0EsaUosOEZBaERBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO2VBSWUsRUFDZEEsVUFBVSxFQUFFLEVBQ1hDLFFBQVEsRUFBUkEsaUJBRFcsRUFFWEMsYUFBYSxFQUFiQSxzQkFGVyxFQURFLEVBS2RDLElBTGMsa0JBS1AsQ0FDTixPQUFPLEVBQVAsQ0FHQSxDQVRhLEVBVWRDLE9BQU8sRUFBRSxFQUNSQyxXQURRLHlCQUNNLENBQ2IsS0FBS0MsS0FBTCxDQUFXQyxLQUFYLENBQWlCQyxJQUFqQixHQUNBLENBSE8sRUFJUkMsTUFKUSx3QkFJYyxLQUFkQyxJQUFjLFFBQWRBLElBQWMsQ0FBUkMsS0FBUSxRQUFSQSxLQUFRLENBQ3JCLGFBQVksNEJBQVosRUFBMENELElBQTFDLEVBQWdEQyxLQUFoRCx3Q0FDQSxDQU5PLEVBVkssRSIsImZpbGUiOiI0MC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cbmltcG9ydCBVbmlQb3B1cCBmcm9tICd1bmlfbW9kdWxlcy91bmktcG9wdXAvY29tcG9uZW50cy91bmktcG9wdXAvdW5pLXBvcHVwLnZ1ZSdcbmltcG9ydCBVbmlQb3B1cFNoYXJlIGZyb20gJ3VuaV9tb2R1bGVzL3VuaS1wb3B1cC9jb21wb25lbnRzL3VuaS1wb3B1cC1zaGFyZS91bmktcG9wdXAtc2hhcmUudnVlJ1xuZXhwb3J0IGRlZmF1bHQge1xuXHRjb21wb25lbnRzOiB7XG5cdFx0VW5pUG9wdXAsXG5cdFx0VW5pUG9wdXBTaGFyZVxuXHR9LFxuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHRcblx0XHR9XG5cdH0sXG5cdG1ldGhvZHM6IHtcblx0XHRoYW5kbGVDbGljaygpIHtcblx0XHRcdHRoaXMuJHJlZnMucG9wdXAub3BlbigpXG5cdFx0fSxcblx0XHRzZWxlY3Qoe2l0ZW0sIGluZGV4fSkge1xuXHRcdFx0Y29uc29sZS5sb2coJ3NlbGVjdGVkIHNvY2lhbCBwbGF0Zm9ybTogJywgaXRlbSwgaW5kZXgpXG5cdFx0fVxuXHR9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///40\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniPopup = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 11));\nvar _uniPopupShare = _interopRequireDefault(__webpack_require__(/*! uni_modules/uni-popup/components/uni-popup-share/uni-popup-share.vue */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i[\"return\"] != null) _i[\"return\"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}var _default =\n{\n  components: {\n    UniPopup: _uniPopup.default,\n    UniPopupShare: _uniPopupShare.default },\n\n  data: function data() {\n    return {\n      categories: null,\n      projects: null };\n\n  },\n  methods: {\n    handleClick: function handleClick() {\n      this.$refs.popup.open();\n    },\n    select: function select(_ref) {var item = _ref.item,index = _ref.index;\n      __f__(\"log\", 'selected social platform: ', item, index, \" at pages/services/services.vue:65\");\n    },\n    toggleCategory: function toggleCategory(id) {var _this = this;\n      if (id) {\n        uni.request({\n          url: this.$baseURL + '/posts?_embed&categories=' + id,\n          method: 'get' }).\n        then(function (_ref2) {var _ref3 = _slicedToArray(_ref2, 2),err = _ref3[0],res = _ref3[1];\n          _this.projects = res.data;\n        });\n      } else {\n        uni.request({\n          url: this.$baseURL + '/posts?_embed',\n          method: 'get' }).\n        then(function (_ref4) {var _ref5 = _slicedToArray(_ref4, 2),err = _ref5[0],res = _ref5[1];\n          _this.projects = res.data;\n        });\n      }\n    },\n    limitChars: function limitChars(str) {\n      str = str.replace(/<\\/?p[^>]*>/g, \"\");\n      return str.substr(0, 50) + '...';\n    } },\n\n  onLoad: function onLoad() {var _this2 = this;\n    // get all categories\n    uni.request({\n      url: this.$baseURL + '/categories?filter[orderby]=date&order=desc',\n      method: 'get' }).\n    then(function (_ref6) {var _ref7 = _slicedToArray(_ref6, 2),err = _ref7[0],res = _ref7[1];\n      _this2.categories = res.data;\n    });\n\n    // get all projects details\n    uni.request({\n      url: this.$baseURL + '/posts?_embed',\n      method: 'get' }).\n    then(function (_ref8) {var _ref9 = _slicedToArray(_ref8, 2),err = _ref9[0],res = _ref9[1];\n      _this2.projects = res.data;\n    });\n  } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 30)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvc2VydmljZXMvc2VydmljZXMudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUE4Q0E7QUFDQSxpSjtBQUNBO0FBQ0E7QUFDQSwrQkFEQTtBQUVBLHlDQUZBLEVBREE7O0FBS0EsTUFMQSxrQkFLQTtBQUNBO0FBQ0Esc0JBREE7QUFFQSxvQkFGQTs7QUFJQSxHQVZBO0FBV0E7QUFDQSxlQURBLHlCQUNBO0FBQ0E7QUFDQSxLQUhBO0FBSUEsVUFKQSx3QkFJQTtBQUNBO0FBQ0EsS0FOQTtBQU9BLGtCQVBBLDBCQU9BLEVBUEEsRUFPQTtBQUNBO0FBQ0E7QUFDQSwrREFEQTtBQUVBLHVCQUZBO0FBR0EsWUFIQSxDQUdBO0FBQ0E7QUFDQSxTQUxBO0FBTUEsT0FQQSxNQU9BO0FBQ0E7QUFDQSw4Q0FEQTtBQUVBLHVCQUZBO0FBR0EsWUFIQSxDQUdBO0FBQ0E7QUFDQSxTQUxBO0FBTUE7QUFDQSxLQXZCQTtBQXdCQSxjQXhCQSxzQkF3QkEsR0F4QkEsRUF3QkE7QUFDQTtBQUNBO0FBQ0EsS0EzQkEsRUFYQTs7QUF3Q0EsUUF4Q0Esb0JBd0NBO0FBQ0E7QUFDQTtBQUNBLHdFQURBO0FBRUEsbUJBRkE7QUFHQSxRQUhBLENBR0E7QUFDQTtBQUNBLEtBTEE7O0FBT0E7QUFDQTtBQUNBLDBDQURBO0FBRUEsbUJBRkE7QUFHQSxRQUhBLENBR0E7QUFDQTtBQUNBLEtBTEE7QUFNQSxHQXhEQSxFIiwiZmlsZSI6IjQwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8dmlldz5cclxuXHRcdDxkaXYgY2xhc3M9XCJjb250YWluZXJcIj5cblx0XHRcdDxkaXYgaWQ9XCJwcm9wZXJ0aWVzXCI+XG5cdFx0XHRcdDx1bCBjbGFzcz1cImNhdGVnb3JpZXNfd3JhcHBlclwiPlxyXG5cdFx0XHRcdFx0PGxpPjxhIGhyZWY9XCIjXCIgQGNsaWNrLnByZXZlbnQ9XCIoKSA9PiB0b2dnbGVDYXRlZ29yeShudWxsKVwiPkFsbDwvYT48L2xpPlxyXG5cdFx0XHRcdFx0PGxpIHYtZm9yPVwiY2F0IGluIGNhdGVnb3JpZXNcIiA6a2V5PVwiY2F0Lm5hbWVcIiAgdi1pZj1cImNhdC5uYW1lIT09J1VuY2F0ZWdvcmlzZWQnXCI+XHJcblx0XHRcdFx0XHRcdDxhIGhyZWY9XCIjXCIgQGNsaWNrLnByZXZlbnQ9XCIoKSA9PiB0b2dnbGVDYXRlZ29yeShjYXQuaWQpXCI+e3sgY2F0Lm5hbWUgfX08L2E+XHJcblx0XHRcdFx0XHQ8L2xpPlxuXHRcdFx0XHQ8L3VsPlxuXHRcdFx0XHQ8ZGl2IGNsYXNzPVwicHJvcGVydHktcG9zdHNcIj5cblx0XHRcdFx0XHQ8ZGl2IGNsYXNzPVwicm93IGFsaWduLWl0ZW1zLWNlbnRlciB2cG9zdF93cmFwcGVyXCIgdi1mb3I9XCJwcm9qZWN0IGluIHByb2plY3RzXCIgOmtleT1cInByb2plY3QuaWRcIj5cclxuXHRcdFx0XHRcdFx0PGRpdiBjbGFzcz1cImNvbC01IHBlLTAgaW1nLXdyYXBwZXJcIj5cclxuXHRcdFx0XHRcdFx0XHQ8YSA6aHJlZj1cInByb2plY3QubGlua1wiPlxyXG5cdFx0XHRcdFx0XHRcdFx0PGltZyA6c3JjPVwicHJvamVjdC5maW1nX3VybFwiIDphbHQ9XCJwcm9qZWN0LnRpdGxlLnJlbmRlcmVkXCI+ICAgICAgICAgIFxyXG5cdFx0XHRcdFx0XHRcdDwvYT5cclxuXHRcdFx0XHRcdFx0PC9kaXY+XHJcblx0XHRcdFx0XHRcdDxkaXYgY2xhc3M9XCJjb2wtN1wiPiAgICAgICAgICAgIFxyXG5cdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3M9XCJyb3cgcmlnaHRcIj5cclxuXHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3M9XCJjb2wtMTIgcHMtMFwiPlxyXG5cdFx0XHRcdFx0XHRcdFx0XHQ8YSBocmVmPVwiPD9waHAgdGhlX3Blcm1hbGluaygpOyA/PlwiPlxyXG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxzcGFuIGNsYXNzPVwidGl0bGVcIj57eyBwcm9qZWN0LnRpdGxlLnJlbmRlcmVkIH19PC9zcGFuPiAgICAgICAgICAgICAgIFxyXG5cdFx0XHRcdFx0XHRcdFx0XHQ8L2E+XHJcblx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj4gIFxyXG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzcz1cImNvbC0xMiBwLTAgZGVzY1wiPlxyXG5cdFx0XHRcdFx0XHRcdFx0XHR7eyBsaW1pdENoYXJzKHByb2plY3QuZXhjZXJwdC5yZW5kZXJlZCkgfX1cclxuXHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxyXG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzcz1cImJlbG93X3RpdGxlIHAtMCBkLWZsZXgganVzdGlmeS1jb250ZW50LWJldHdlZW4gYWxpZ24taXRlbXMtY2VudGVyXCI+XHJcblx0XHRcdFx0XHRcdFx0XHRcdFx0PGRpdj48c3BhbiBjbGFzcz1cImNhdGVnb3J5XCI+e3sgcHJvamVjdC5fZW1iZWRkZWRbJ3dwOnRlcm0nXVswXVswXS5uYW1lIH19PC9zcGFuPjwvZGl2PlxyXG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3M9XCJzaGFyZS1idG5cIiBAY2xpY2s9XCJoYW5kbGVDbGlja1wiPlxyXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGkgY2xhc3M9XCJmYSBmYS1zaGFyZS1zcXVhcmUtb1wiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiPjwvaT5cclxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cclxuXHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxyXG5cdFx0XHRcdFx0XHRcdDwvZGl2PiAgICAgICAgXHJcblx0XHRcdFx0XHRcdDwvZGl2PlxyXG5cdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdDwvZGl2PlxuXHRcdFx0PC9kaXY+XHJcblx0XHQ8L2Rpdj5cclxuXHRcdDxVbmlQb3B1cCByZWY9XCJwb3B1cFwiIHR5cGU9XCJzaGFyZVwiPlxyXG5cdFx0XHQ8VW5pUG9wdXBTaGFyZSBAc2VsZWN0PVwic2VsZWN0XCI+PC9VbmlQb3B1cFNoYXJlPlxyXG5cdFx0PC9VbmlQb3B1cD5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cclxuXHRpbXBvcnQgVW5pUG9wdXAgZnJvbSAndW5pX21vZHVsZXMvdW5pLXBvcHVwL2NvbXBvbmVudHMvdW5pLXBvcHVwL3VuaS1wb3B1cC52dWUnXHJcblx0aW1wb3J0IFVuaVBvcHVwU2hhcmUgZnJvbSAndW5pX21vZHVsZXMvdW5pLXBvcHVwL2NvbXBvbmVudHMvdW5pLXBvcHVwLXNoYXJlL3VuaS1wb3B1cC1zaGFyZS52dWUnXG5cdGV4cG9ydCBkZWZhdWx0IHtcclxuXHRcdGNvbXBvbmVudHM6IHtcclxuXHRcdFx0VW5pUG9wdXAsXHJcblx0XHRcdFVuaVBvcHVwU2hhcmVcclxuXHRcdH0sXG5cdFx0ZGF0YSgpIHtcblx0XHRcdHJldHVybiB7XG5cdFx0XHRcdGNhdGVnb3JpZXM6IG51bGwsXHJcblx0XHRcdFx0cHJvamVjdHM6IG51bGxcblx0XHRcdH1cblx0XHR9LFxuXHRcdG1ldGhvZHM6IHtcblx0XHRcdGhhbmRsZUNsaWNrKCkge1xyXG5cdFx0XHRcdHRoaXMuJHJlZnMucG9wdXAub3BlbigpXHJcblx0XHRcdH0sXHJcblx0XHRcdHNlbGVjdCh7aXRlbSwgaW5kZXh9KSB7XHJcblx0XHRcdFx0Y29uc29sZS5sb2coJ3NlbGVjdGVkIHNvY2lhbCBwbGF0Zm9ybTogJywgaXRlbSwgaW5kZXgpXHJcblx0XHRcdH0sXHJcblx0XHRcdHRvZ2dsZUNhdGVnb3J5KGlkKSB7XHJcblx0XHRcdFx0aWYoaWQpIHtcclxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHRcdFx0dXJsOiB0aGlzLiRiYXNlVVJMICsgJy9wb3N0cz9fZW1iZWQmY2F0ZWdvcmllcz0nK2lkLFxyXG5cdFx0XHRcdFx0XHRtZXRob2Q6ICdnZXQnXHJcblx0XHRcdFx0XHR9KS50aGVuKChbZXJyLCByZXNdKSA9PiB7XHJcblx0XHRcdFx0XHRcdHRoaXMucHJvamVjdHMgPSByZXMuZGF0YVxyXG5cdFx0XHRcdFx0fSlcdFx0XHRcdFx0XHJcblx0XHRcdFx0fWVsc2V7XHJcblx0XHRcdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0XHRcdHVybDogdGhpcy4kYmFzZVVSTCArICcvcG9zdHM/X2VtYmVkJyxcclxuXHRcdFx0XHRcdFx0bWV0aG9kOiAnZ2V0J1xyXG5cdFx0XHRcdFx0fSkudGhlbigoW2VyciwgcmVzXSkgPT4ge1xyXG5cdFx0XHRcdFx0XHR0aGlzLnByb2plY3RzID0gcmVzLmRhdGFcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRsaW1pdENoYXJzKHN0cikge1xyXG5cdFx0XHRcdHN0ciA9IHN0ci5yZXBsYWNlKC88XFwvP3BbXj5dKj4vZywgXCJcIilcclxuXHRcdFx0XHRyZXR1cm4gc3RyLnN1YnN0cigwLCA1MCkrJy4uLidcclxuXHRcdFx0fVxuXHRcdH0sXHJcblx0XHRvbkxvYWQoKSB7XHJcblx0XHRcdC8vIGdldCBhbGwgY2F0ZWdvcmllc1xyXG5cdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0dXJsOiB0aGlzLiRiYXNlVVJMICsgJy9jYXRlZ29yaWVzP2ZpbHRlcltvcmRlcmJ5XT1kYXRlJm9yZGVyPWRlc2MnLFxyXG5cdFx0XHRcdG1ldGhvZDogJ2dldCdcclxuXHRcdFx0fSkudGhlbigoW2VyciwgcmVzXSkgPT4ge1xyXG5cdFx0XHRcdHRoaXMuY2F0ZWdvcmllcyA9IHJlcy5kYXRhXHJcblx0XHRcdH0pXHJcblx0XHRcdFxyXG5cdFx0XHQvLyBnZXQgYWxsIHByb2plY3RzIGRldGFpbHNcclxuXHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdHVybDogdGhpcy4kYmFzZVVSTCArICcvcG9zdHM/X2VtYmVkJyxcclxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnXHJcblx0XHRcdH0pLnRoZW4oKFtlcnIsIHJlc10pID0+IHtcclxuXHRcdFx0XHR0aGlzLnByb2plY3RzID0gcmVzLmRhdGFcclxuXHRcdFx0fSlcclxuXHRcdH1cblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZT5cbi8qXG4gICAgSG9tZSBwcm9wZXJ0aWVzXG4qL1xuI3Byb3BlcnRpZXMge1xuICBwYWRkaW5nLXRvcDogNjVweDtcbn1cbiNwcm9wZXJ0aWVzIC52cG9zdF93cmFwcGVyIHtcbiAgcGFkZGluZy10b3A6IDEwcHg7XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgIzYxNjE2MTtcbiAgZm9udC1zaXplOiAwLjhyZW07XG59XG4jcHJvcGVydGllcyAudnBvc3Rfd3JhcHBlciAuaW1nLXdyYXBwZXIge1xuICBwYWRkaW5nLXJpZ2h0OiA1cHg7XG59XG5cbiNwcm9wZXJ0aWVzIC52cG9zdF93cmFwcGVyIC50aXRsZSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBmb250LXNpemU6IDFyZW07XG4gIG1hcmdpbi1ib3R0b206IDJweDtcbiAgY29sb3I6ICNENkI4OEI7XG59XG5cbiNwcm9wZXJ0aWVzIC52cG9zdF93cmFwcGVyIC5iZWxvd190aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZvbnQtc2l6ZTogLjhyZW07XG4gIG1hcmdpbi10b3A6IDEwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4jcHJvcGVydGllcyAudnBvc3Rfd3JhcHBlciAuYmVsb3dfdGl0bGUgLnNoYXJlLWJ0biB7XG4gIG1hcmdpbi1yaWdodDogMWVtO1xuICBmb250LXNpemU6IDEuNWVtO1xufVxuI3Byb3BlcnRpZXMgLnZwb3N0X3dyYXBwZXIgLnJvdy5yaWdodCB7XG4gIHBhZGRpbmctbGVmdDogOHB4O1xufVxuI3Byb3BlcnRpZXMgLnZwb3N0X3dyYXBwZXIgLmJlbG93X3RpdGxlIC5jYXRlZ29yeSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgY29sb3I6ICNmZmY7XG4gIGJhY2tncm91bmQtY29sb3I6ICNENkI4OEI7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG4gIHBhZGRpbmc6IDJweCA1cHg7XG59XG4jcHJvcGVydGllcyAudnBvc3Rfd3JhcHBlciAuZGVzYyB7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xufVxuI3Byb3BlcnRpZXMgLnZwb3N0X3dyYXBwZXIgLmRlc2MgcCB7XG4gIG1hcmdpbi1ib3R0b206IDVweDtcbn1cbiNwcm9wZXJ0aWVzIC52cG9zdF93cmFwcGVyIC5tZXRhLWRhdGEge1xuICBwYWRkaW5nOiAwO1xufVxuI3Byb3BlcnRpZXMgLnZwb3N0X3dyYXBwZXIgLm1ldGEtZGF0YSBkaXYge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG4jcHJvcGVydGllcyAudnBvc3Rfd3JhcHBlciAubWV0YS1kYXRhIC5mYSB7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMyk7XG59XG4jcHJvcGVydGllcyAudnBvc3Rfd3JhcHBlciAubWV0YS1kYXRhIC5jb21tZW50cyB7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuI3Byb3BlcnRpZXMgLmNhdGVnb3JpZXNfd3JhcHBlciB7XG4gIGxpc3Qtc3R5bGU6IG5vbmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuI3Byb3BlcnRpZXMgLmNhdGVnb3JpZXNfd3JhcHBlciBsaSB7XG4gIGNvbG9yOiAjZmZmO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRDZCODhCO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHBhZGRpbmc6IDJweCA1cHg7XG4gIGZvbnQtc2l6ZTogLjllbTtcbn1cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///40\n");
 
 /***/ }),
 /* 41 */
@@ -1492,7 +1640,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      url: \"http://remi.net.au/gwa-app/login/\" };\n\n  },\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  methods: {} };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6WyJkYXRhIiwidXJsIiwib25Mb2FkIiwiaGVpZ2h0IiwidW5pIiwiZ2V0U3lzdGVtSW5mbyIsInN1Y2Nlc3MiLCJzeXNpbmZvIiwid2luZG93SGVpZ2h0IiwiY29tcGxldGUiLCJjdXJyZW50V2VidmlldyIsIiRzY29wZSIsIiRnZXRBcHBXZWJ2aWV3Iiwic2V0VGltZW91dCIsInd2IiwiY2hpbGRyZW4iLCJzZXRTdHlsZSIsInRvcCIsInNjYWxhYmxlIiwibWV0aG9kcyJdLCJtYXBwaW5ncyI6IndGQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFZTtBQUNkQSxNQURjLGtCQUNQO0FBQ04sV0FBTztBQUNOQyxTQUFHLEVBQUMsbUNBREUsRUFBUDs7QUFHQSxHQUxhO0FBTWRDLFFBTmMsb0JBTU47QUFDUCxRQUFJQyxNQUFNLEdBQUMsQ0FBWCxDQURPLENBQ007QUFDYkMsT0FBRyxDQUFDQyxhQUFKLENBQWtCO0FBQ2pCO0FBQ0FDLGFBQU8sRUFBRSxpQkFBQ0MsT0FBRCxFQUFhO0FBQ3RCSixjQUFNLEdBQUdJLE9BQU8sQ0FBQ0MsWUFBakIsQ0FEc0IsQ0FDUTtBQUM5QixPQUppQjtBQUtsQkMsY0FBUSxFQUFFLG9CQUFNO0FBQ1gsT0FOYSxFQUFsQjs7QUFRQSxRQUFJQyxjQUFjLEdBQUcsS0FBS0MsTUFBTCxDQUFZQyxjQUFaLEVBQXJCLENBVk8sQ0FVMkM7QUFDbERDLGNBQVUsQ0FBQyxZQUFXO0FBQ3BCLFVBQUlDLEVBQUUsR0FBR0osY0FBYyxDQUFDSyxRQUFmLEdBQTBCLENBQTFCLENBQVQ7QUFDQUQsUUFBRSxDQUFDRSxRQUFILENBQVksRUFBQztBQUNiQyxXQUFHLEVBQUUsRUFETyxFQUNKO0FBQ1JkLGNBQU0sRUFBQ0EsTUFGSyxFQUVFOztBQUVkZSxnQkFBUSxFQUFDLEtBSkcsQ0FJUTtBQUpSLE9BQVo7QUFNRCxLQVJTLEVBUVAsSUFSTyxDQUFWLENBWE8sQ0FtQkU7QUFDVCxHQTFCYTtBQTJCZEMsU0FBTyxFQUFFLEVBM0JLLEUiLCJmaWxlIjoiNDUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cbmV4cG9ydCBkZWZhdWx0IHtcblx0ZGF0YSgpIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0dXJsOlwiaHR0cDovL3JlbWkubmV0LmF1L2d3YS1hcHAvbG9naW4vXCJcblx0XHR9XG5cdH0sXG5cdG9uTG9hZCgpe1xuXHRcdHZhciBoZWlnaHQ9MDsvL+WumuS5ieWKqOaAgeeahOmrmOW6puWPmOmHj++8jOWmgumrmOW6puS4uuWumuWAvO+8jOWPr+S7peebtOaOpeWGmVxuXHRcdHVuaS5nZXRTeXN0ZW1JbmZvKHtcblx0XHRcdC8v5oiQ5Yqf6I635Y+W55qE5Zue6LCD5Ye95pWw77yM6L+U5Zue5YC85Li657O757uf5L+h5oGvXG5cdFx0XHRzdWNjZXNzOiAoc3lzaW5mbykgPT4ge1xuXHRcdFx0aGVpZ2h0ID0gc3lzaW5mby53aW5kb3dIZWlnaHQ7Ly/oh6rooYzkv67mlLnvvIzoh6rlt7HpnIDopoHnmoTpq5jluqbCoOatpOWkhOWmguW6lemDqOacieWFtuS7luWGheWuue+8jOWPr+S7peebtOaOpS0tLSgtNTAp6L+Z56eNXG5cdFx0fSxcblx0XHRjb21wbGV0ZTogKCkgPT4ge1xuXHRcdCAgICB9XG5cdFx0fSk7XG5cdFx0dmFyIGN1cnJlbnRXZWJ2aWV3ID0gdGhpcy4kc2NvcGUuJGdldEFwcFdlYnZpZXcoKTsvL+iOt+WPluW9k+WJjXdlYi12aWV3XG5cdFx0c2V0VGltZW91dChmdW5jdGlvbigpIHtcblx0XHRcdFx0dmFyIHd2ID0gY3VycmVudFdlYnZpZXcuY2hpbGRyZW4oKVswXTtcblx0XHRcdFx0d3Yuc2V0U3R5bGUoey8v6K6+572ud2ViLXZpZXfot53nprvpobbpg6jnmoTot53nprvku6Xlj4roh6rlt7HnmoTpq5jluqbvvIzljZXkvY3kuLpweFxuXHRcdFx0XHR0b3A6IDY4LC8v5q2k5aSE5piv6Led56a76aG26YOo55qE6auY5bqm77yM5bqU6K+l5piv5L2g6aG16Z2i55qE5aS06YOoXG5cdFx0XHRcdGhlaWdodDpoZWlnaHQsLy93ZWJ2aWV355qE6auY5bqmXG5cdFx0XHRcdFxuXHRcdFx0XHRzY2FsYWJsZTpmYWxzZcKgIMKgIMKgIC8vd2Vidmlld+eahOmhtemdouaYr+WQpuWPr+S7pee8qeaUvu+8jOWPjOaMh+aUvuWkp+e8qeWwj1xuXHRcdFx0fSlcblx0XHR9LCAxMDAwKTsvL+WmgumhtemdouWIneWni+WMluiwg+eUqOmcgOimgeWGmeW7tui/nyBcblx0fSxcblx0bWV0aG9kczoge1xuXHRcdFxuXHR9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///45\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      url: \"http://remi.net.au/gwa-app/login/\" };\n\n  },\n  onLoad: function onLoad() {\n    var height = 0; //定义动态的高度变量，如高度为定值，可以直接写\n    uni.getSystemInfo({\n      //成功获取的回调函数，返回值为系统信息\n      success: function success(sysinfo) {\n        height = sysinfo.windowHeight; //自行修改，自己需要的高度 此处如底部有其他内容，可以直接---(-50)这种\n      },\n      complete: function complete() {\n      } });\n\n    var currentWebview = this.$scope.$getAppWebview(); //获取当前web-view\n    setTimeout(function () {\n      var wv = currentWebview.children()[0];\n      wv.setStyle({ //设置web-view距离顶部的距离以及自己的高度，单位为px\n        top: 68, //此处是距离顶部的高度，应该是你页面的头部\n        height: height, //webview的高度\n\n        scalable: false //webview的页面是否可以缩放，双指放大缩小\n      });\n    }, 1000); //如页面初始化调用需要写延迟 \n  },\n  methods: {} };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBT0E7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSw4Q0FEQTs7QUFHQSxHQUxBO0FBTUEsUUFOQSxvQkFNQTtBQUNBLG1CQURBLENBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxzQ0FEQSxDQUNBO0FBQ0EsT0FKQTtBQUtBO0FBQ0EsT0FOQTs7QUFRQSxzREFWQSxDQVVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFEQSxFQUNBO0FBQ0Esc0JBRkEsRUFFQTs7QUFFQSx1QkFKQSxDQUlBO0FBSkE7QUFNQSxLQVJBLEVBUUEsSUFSQSxFQVhBLENBbUJBO0FBQ0EsR0ExQkE7QUEyQkEsYUEzQkEsRSIsImZpbGUiOiI0NS5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PHZpZXc+XG5cdFx0PHdlYi12aWV3IGlkPVwibWFwQ29udGFpbmVyXCIgOnNyYz1cInVybFwiICA+PC93ZWItdmlldz5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0ZXhwb3J0IGRlZmF1bHQge1xuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xuXHRcdFx0XHR1cmw6XCJodHRwOi8vcmVtaS5uZXQuYXUvZ3dhLWFwcC9sb2dpbi9cIlxuXHRcdFx0fVxuXHRcdH0sXHJcblx0XHRvbkxvYWQoKXtcclxuXHRcdFx0dmFyIGhlaWdodD0wOy8v5a6a5LmJ5Yqo5oCB55qE6auY5bqm5Y+Y6YeP77yM5aaC6auY5bqm5Li65a6a5YC877yM5Y+v5Lul55u05o6l5YaZXHJcblx0XHRcdHVuaS5nZXRTeXN0ZW1JbmZvKHtcclxuXHRcdFx0XHQvL+aIkOWKn+iOt+WPlueahOWbnuiwg+WHveaVsO+8jOi/lOWbnuWAvOS4uuezu+e7n+S/oeaBr1xyXG5cdFx0XHRcdHN1Y2Nlc3M6IChzeXNpbmZvKSA9PiB7XHJcblx0XHRcdFx0aGVpZ2h0ID0gc3lzaW5mby53aW5kb3dIZWlnaHQ7Ly/oh6rooYzkv67mlLnvvIzoh6rlt7HpnIDopoHnmoTpq5jluqbCoOatpOWkhOWmguW6lemDqOacieWFtuS7luWGheWuue+8jOWPr+S7peebtOaOpS0tLSgtNTAp6L+Z56eNXHJcblx0XHRcdH0sXHJcblx0XHRcdGNvbXBsZXRlOiAoKSA9PiB7XHJcblx0XHRcdCAgICB9XHJcblx0XHRcdH0pO1xyXG5cdFx0XHR2YXIgY3VycmVudFdlYnZpZXcgPSB0aGlzLiRzY29wZS4kZ2V0QXBwV2VidmlldygpOy8v6I635Y+W5b2T5YmNd2ViLXZpZXdcclxuXHRcdFx0c2V0VGltZW91dChmdW5jdGlvbigpIHtcclxuXHRcdFx0XHRcdHZhciB3diA9IGN1cnJlbnRXZWJ2aWV3LmNoaWxkcmVuKClbMF07XHJcblx0XHRcdFx0XHR3di5zZXRTdHlsZSh7Ly/orr7nva53ZWItdmlld+i3neemu+mhtumDqOeahOi3neemu+S7peWPiuiHquW3seeahOmrmOW6pu+8jOWNleS9jeS4unB4XHJcblx0XHRcdFx0XHR0b3A6IDY4LC8v5q2k5aSE5piv6Led56a76aG26YOo55qE6auY5bqm77yM5bqU6K+l5piv5L2g6aG16Z2i55qE5aS06YOoXHJcblx0XHRcdFx0XHRoZWlnaHQ6aGVpZ2h0LC8vd2Vidmlld+eahOmrmOW6plxyXG5cdFx0XHRcdFx0XHJcblx0XHRcdFx0XHRzY2FsYWJsZTpmYWxzZcKgIMKgIMKgIC8vd2Vidmlld+eahOmhtemdouaYr+WQpuWPr+S7pee8qeaUvu+8jOWPjOaMh+aUvuWkp+e8qeWwj1xyXG5cdFx0XHRcdH0pXHJcblx0XHRcdH0sIDEwMDApOy8v5aaC6aG16Z2i5Yid5aeL5YyW6LCD55So6ZyA6KaB5YaZ5bu26L+fIFxyXG5cdFx0fSxcblx0XHRtZXRob2RzOiB7XG5cdFx0XHRcblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG5cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///45\n");
 
 /***/ }),
 /* 46 */
