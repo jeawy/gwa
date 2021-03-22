@@ -4,11 +4,11 @@
 		<form id="login-form" @submit="handleSubmit">
 			<div class="form-group">
 				<label>Username</label>
-				<input placeholder="Username" v-model="username" />
+				<input v-model="username" />
 			</div>
 			<div class="form-group">
 				<label>Password</label>
-				<input placeholder="Password" type="password" v-model="password" />
+				<input type="password" v-model="password" />
 			</div>				
 			<button form-type="submit">Log in</button>
 		</form>		

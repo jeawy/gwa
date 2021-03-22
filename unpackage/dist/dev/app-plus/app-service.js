@@ -1617,7 +1617,14 @@ var render = function() {
           ? _c("LoginForm", { attrs: { _i: 2 } })
           : _vm._e(),
         _vm._$s(3, "i", !_vm.showLogin)
-          ? _c("SignupForm", { attrs: { _i: 3 } })
+          ? _c("SignupForm", {
+              attrs: { _i: 3 },
+              on: {
+                showLoginForm: function() {
+                  return (_vm.showLogin = true)
+                }
+              }
+            })
           : _vm._e(),
         _c(
           "div",
@@ -1677,7 +1684,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\nvar _SignupForm = _interopRequireDefault(__webpack_require__(/*! ./SignupForm.vue */ 46));\nvar _LoginForm = _interopRequireDefault(__webpack_require__(/*! ./LoginForm.vue */ 51));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default = { components: { SignupForm: _SignupForm.default, LoginForm: _LoginForm.default }, data: function data() {return { showLogin: true };}, methods: { toggleForm: function toggleForm() {\n      this.showLogin = !this.showLogin;\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBYUE7QUFDQSx3Rjs7Ozs7Ozs7Ozs7O2VBQ0EsRUFDQSxjQUNBLCtCQURBLEVBRUEsNkJBRkEsRUFEQSxFQUtBLElBTEEsa0JBS0EsQ0FDQSxTQUNBLGVBREEsR0FHQSxDQVRBLEVBVUEsV0FDQSxVQURBLHdCQUNBO0FBQ0E7QUFDQSxLQUhBLEVBVkEsRSIsImZpbGUiOiI0NS5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PHZpZXcgaWQ9XCJwcm9maWxlLWZvcm1cIj5cclxuXHRcdDxkaXYgY2xhc3M9XCJjb250YWluZXJcIj5cblx0XHRcdDxMb2dpbkZvcm0gdi1pZj1cInNob3dMb2dpblwiIC8+XHJcblx0XHRcdDxTaWdudXBGb3JtIHYtaWY9XCIhc2hvd0xvZ2luXCIgLz5cclxuXHRcdFx0PGRpdiBjbGFzcz1cImZvcm0tc3dpdGNoLXdyYXBwZXJcIj5cclxuXHRcdFx0XHQ8YSBjbGFzcz1cImZvcm0tc3dpdGNoXCIgaHJlZj1cIiNcIiBAY2xpY2sucHJldmVudD1cInRvZ2dsZUZvcm1cIj5Td2l0Y2ggdG8ge3sgc2hvd0xvZ2luID8gJ3NpZ251cCcgOiAnbG9naW4nIH19PC9hPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdDwvZGl2PlxuXHQ8L3ZpZXc+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxyXG5cdGltcG9ydCBTaWdudXBGb3JtIGZyb20gJy4vU2lnbnVwRm9ybS52dWUnXHJcblx0aW1wb3J0IExvZ2luRm9ybSBmcm9tICcuL0xvZ2luRm9ybS52dWUnXG5cdGV4cG9ydCBkZWZhdWx0IHtcclxuXHRcdGNvbXBvbmVudHM6IHtcclxuXHRcdFx0U2lnbnVwRm9ybSxcclxuXHRcdFx0TG9naW5Gb3JtXHJcblx0XHR9LFxuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xyXG5cdFx0XHRcdHNob3dMb2dpbjogdHJ1ZVxuXHRcdFx0fVxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0dG9nZ2xlRm9ybSgpIHtcclxuXHRcdFx0XHR0aGlzLnNob3dMb2dpbiA9ICF0aGlzLnNob3dMb2dpblxyXG5cdFx0XHR9XG5cdFx0fVxuXHR9XG48L3NjcmlwdD5cblxuPHN0eWxlIGxhbmc9XCJzY3NzXCIgc2NvcGVkPlxyXG4uZm9ybS1zd2l0Y2gtd3JhcHBlciB7XHJcblx0d2lkdGg6IDEwMCU7XHJcblx0bWFyZ2luLXRvcDogMS4yZW07XHJcblx0LmZvcm0tc3dpdGNoIHtcblx0XHR0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcblx0XHRmb250LXdlaWdodDogNjAwO1xuXHRcdGNvbG9yOiBncmV5O1xyXG5cdFx0cGFkZGluZzogMDtcblx0fVx0XHRcclxufVxuPC9zdHlsZT5cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///45\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\nvar _SignupForm = _interopRequireDefault(__webpack_require__(/*! ./SignupForm.vue */ 46));\nvar _LoginForm = _interopRequireDefault(__webpack_require__(/*! ./LoginForm.vue */ 51));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default = { components: { SignupForm: _SignupForm.default, LoginForm: _LoginForm.default }, data: function data() {return { showLogin: true };}, methods: { toggleForm: function toggleForm() {\n      this.showLogin = !this.showLogin;\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBYUE7QUFDQSx3Rjs7Ozs7Ozs7Ozs7O2VBQ0EsRUFDQSxjQUNBLCtCQURBLEVBRUEsNkJBRkEsRUFEQSxFQUtBLElBTEEsa0JBS0EsQ0FDQSxTQUNBLGVBREEsR0FHQSxDQVRBLEVBVUEsV0FDQSxVQURBLHdCQUNBO0FBQ0E7QUFDQSxLQUhBLEVBVkEsRSIsImZpbGUiOiI0NS5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PHZpZXcgaWQ9XCJwcm9maWxlLWZvcm1cIj5cclxuXHRcdDxkaXYgY2xhc3M9XCJjb250YWluZXJcIj5cblx0XHRcdDxMb2dpbkZvcm0gdi1pZj1cInNob3dMb2dpblwiIC8+XHJcblx0XHRcdDxTaWdudXBGb3JtIHYtaWY9XCIhc2hvd0xvZ2luXCIgQHNob3dMb2dpbkZvcm09XCIoKSA9PiBzaG93TG9naW4gPSB0cnVlXCIgLz5cclxuXHRcdFx0PGRpdiBjbGFzcz1cImZvcm0tc3dpdGNoLXdyYXBwZXJcIj5cclxuXHRcdFx0XHQ8YSBjbGFzcz1cImZvcm0tc3dpdGNoXCIgaHJlZj1cIiNcIiBAY2xpY2sucHJldmVudD1cInRvZ2dsZUZvcm1cIj5Td2l0Y2ggdG8ge3sgc2hvd0xvZ2luID8gJ3NpZ251cCcgOiAnbG9naW4nIH19PC9hPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdDwvZGl2PlxuXHQ8L3ZpZXc+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxyXG5cdGltcG9ydCBTaWdudXBGb3JtIGZyb20gJy4vU2lnbnVwRm9ybS52dWUnXHJcblx0aW1wb3J0IExvZ2luRm9ybSBmcm9tICcuL0xvZ2luRm9ybS52dWUnXG5cdGV4cG9ydCBkZWZhdWx0IHtcclxuXHRcdGNvbXBvbmVudHM6IHtcclxuXHRcdFx0U2lnbnVwRm9ybSxcclxuXHRcdFx0TG9naW5Gb3JtXHJcblx0XHR9LFxuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xyXG5cdFx0XHRcdHNob3dMb2dpbjogdHJ1ZVxuXHRcdFx0fVxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0dG9nZ2xlRm9ybSgpIHtcclxuXHRcdFx0XHR0aGlzLnNob3dMb2dpbiA9ICF0aGlzLnNob3dMb2dpblxyXG5cdFx0XHR9XG5cdFx0fVxuXHR9XG48L3NjcmlwdD5cblxuPHN0eWxlIGxhbmc9XCJzY3NzXCIgc2NvcGVkPlxyXG4uZm9ybS1zd2l0Y2gtd3JhcHBlciB7XHJcblx0d2lkdGg6IDEwMCU7XHJcblx0bWFyZ2luLXRvcDogMS4yZW07XHJcblx0LmZvcm0tc3dpdGNoIHtcblx0XHR0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcblx0XHRmb250LXdlaWdodDogNjAwO1xuXHRcdGNvbG9yOiBncmV5O1xyXG5cdFx0cGFkZGluZzogMDtcblx0fVx0XHRcclxufVxuPC9zdHlsZT5cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///45\n");
 
 /***/ }),
 /* 46 */
@@ -1732,144 +1739,148 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "signup-wrapper", _i: 0 } }, [
     _c("h1"),
-    _c("form", { attrs: { id: "signup-form", _i: 2 } }, [
-      _c(
-        "div",
-        { staticClass: _vm._$s(3, "sc", "form-group"), attrs: { _i: 3 } },
-        [
-          _c("label"),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.username,
-                expression: "username"
-              }
-            ],
-            attrs: { _i: 5 },
-            domProps: { value: _vm._$s(5, "v-model", _vm.username) },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+    _c(
+      "form",
+      { attrs: { id: "signup-form", _i: 2 }, on: { submit: _vm.handleSubmit } },
+      [
+        _c(
+          "div",
+          { staticClass: _vm._$s(3, "sc", "form-group"), attrs: { _i: 3 } },
+          [
+            _c("label"),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.username,
+                  expression: "username"
                 }
-                _vm.username = $event.target.value
-              }
-            }
-          })
-        ]
-      ),
-      _c(
-        "div",
-        { staticClass: _vm._$s(6, "sc", "form-group"), attrs: { _i: 6 } },
-        [
-          _c("label"),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.fname,
-                expression: "fname"
-              }
-            ],
-            attrs: { _i: 8 },
-            domProps: { value: _vm._$s(8, "v-model", _vm.fname) },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              attrs: { _i: 5 },
+              domProps: { value: _vm._$s(5, "v-model", _vm.username) },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.username = $event.target.value
                 }
-                _vm.fname = $event.target.value
               }
-            }
-          })
-        ]
-      ),
-      _c(
-        "div",
-        { staticClass: _vm._$s(9, "sc", "form-group"), attrs: { _i: 9 } },
-        [
-          _c("label"),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.lname,
-                expression: "lname"
-              }
-            ],
-            attrs: { _i: 11 },
-            domProps: { value: _vm._$s(11, "v-model", _vm.lname) },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+            })
+          ]
+        ),
+        _c(
+          "div",
+          { staticClass: _vm._$s(6, "sc", "form-group"), attrs: { _i: 6 } },
+          [
+            _c("label"),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.fname,
+                  expression: "fname"
                 }
-                _vm.lname = $event.target.value
-              }
-            }
-          })
-        ]
-      ),
-      _c(
-        "div",
-        { staticClass: _vm._$s(12, "sc", "form-group"), attrs: { _i: 12 } },
-        [
-          _c("label"),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.email,
-                expression: "email"
-              }
-            ],
-            attrs: { _i: 14 },
-            domProps: { value: _vm._$s(14, "v-model", _vm.email) },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              attrs: { _i: 8 },
+              domProps: { value: _vm._$s(8, "v-model", _vm.fname) },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.fname = $event.target.value
                 }
-                _vm.email = $event.target.value
               }
-            }
-          })
-        ]
-      ),
-      _c(
-        "div",
-        { staticClass: _vm._$s(15, "sc", "form-group"), attrs: { _i: 15 } },
-        [
-          _c("label"),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.password,
-                expression: "password"
-              }
-            ],
-            attrs: { _i: 17 },
-            domProps: { value: _vm._$s(17, "v-model", _vm.password) },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+            })
+          ]
+        ),
+        _c(
+          "div",
+          { staticClass: _vm._$s(9, "sc", "form-group"), attrs: { _i: 9 } },
+          [
+            _c("label"),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.lname,
+                  expression: "lname"
                 }
-                _vm.password = $event.target.value
+              ],
+              attrs: { _i: 11 },
+              domProps: { value: _vm._$s(11, "v-model", _vm.lname) },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.lname = $event.target.value
+                }
               }
-            }
-          })
-        ]
-      ),
-      _c("button", {})
-    ])
+            })
+          ]
+        ),
+        _c(
+          "div",
+          { staticClass: _vm._$s(12, "sc", "form-group"), attrs: { _i: 12 } },
+          [
+            _c("label"),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
+              attrs: { _i: 14 },
+              domProps: { value: _vm._$s(14, "v-model", _vm.email) },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
+              }
+            })
+          ]
+        ),
+        _c(
+          "div",
+          { staticClass: _vm._$s(15, "sc", "form-group"), attrs: { _i: 15 } },
+          [
+            _c("label"),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password,
+                  expression: "password"
+                }
+              ],
+              attrs: { _i: 17 },
+              domProps: { value: _vm._$s(17, "v-model", _vm.password) },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password = $event.target.value
+                }
+              }
+            })
+          ]
+        ),
+        _c("button", {})
+      ]
+    )
   ])
 }
 var recyclableRender = false
@@ -1898,7 +1909,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      username: \"\",\n      fname: \"\",\n      lname: \"\",\n      email: \"\",\n      password: \"\" };\n\n  } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9TaWdudXBGb3JtLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0JBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0Esa0JBREE7QUFFQSxlQUZBO0FBR0EsZUFIQTtBQUlBLGVBSkE7QUFLQSxrQkFMQTs7QUFPQSxHQVRBLEUiLCJmaWxlIjoiNTAuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XHJcblx0PGRpdiBpZD1cInNpZ251cC13cmFwcGVyXCI+XHJcblx0XHQ8aDE+UmVnaXN0ZXI8L2gxPlxyXG5cdFx0PGZvcm0gaWQ9XCJzaWdudXAtZm9ybVwiPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5Vc2VybmFtZTwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJ1c2VybmFtZVwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5GaXJzdCBOYW1lPC9sYWJlbD5cclxuXHRcdFx0XHQ8aW5wdXQgdi1tb2RlbD1cImZuYW1lXCIgLz5cclxuXHRcdFx0PC9kaXY+XHJcblx0XHRcdDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwXCI+XHJcblx0XHRcdFx0PGxhYmVsPkxhc3QgTmFtZTwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJsbmFtZVwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5FbWFpbDwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJlbWFpbFwiIHR5cGU9XCJlbWFpbFwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5QYXNzd29yZDwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJwYXNzd29yZFwiIHR5cGU9XCJwYXNzd29yZFwiIC8+XHJcblx0XHRcdDwvZGl2Plx0XHJcblx0XHRcdDxidXR0b24gdHlwZT1cInN1Ym1pdFwiPlNpZ251cDwvYnV0dG9uPlxyXG5cdFx0PC9mb3JtPlxyXG5cdDwvZGl2PlxyXG5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XHJcblx0ZXhwb3J0IGRlZmF1bHQge1xyXG5cdFx0ZGF0YSgpIHtcclxuXHRcdFx0cmV0dXJuIHtcclxuXHRcdFx0XHR1c2VybmFtZTogXCJcIixcclxuXHRcdFx0XHRmbmFtZTogXCJcIixcclxuXHRcdFx0XHRsbmFtZTogXCJcIixcclxuXHRcdFx0XHRlbWFpbDogXCJcIixcclxuXHRcdFx0XHRwYXNzd29yZDogXCJcIlxyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZSBsYW5nPVwic2Nzc1wiIHNjb3BlZD5cclxuXHQjc2lnbnVwLXdyYXBwZXIge1xyXG5cdFx0cGFkZGluZy10b3A6IDY1cHg7XHJcblx0XHRcclxuXHRcdGgxIHtcclxuXHRcdFx0bWFyZ2luLWJvdHRvbTogLjVlbTtcclxuXHRcdH1cclxuXHRcdC5mb3JtLWdyb3VwIHtcclxuXHRcdFx0bWFyZ2luLWJvdHRvbTogMWVtO1xyXG5cdFx0XHRcclxuXHRcdFx0bGFiZWwge1xyXG5cdFx0XHRcdG1hcmdpbi1ib3R0b206IDVweDtcclxuXHRcdFx0XHRmb250LXNpemU6IDEuMWVtO1xyXG5cdFx0XHR9XHJcblx0XHRcdGlucHV0IHtcclxuXHRcdFx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG5cdFx0XHRcdGNvbG9yOiAjMDAwO1xyXG5cdFx0XHRcdHBhZGRpbmc6IDVweDtcclxuXHRcdFx0XHRtaW4taGVpZ2h0OiAzMHB4O1xyXG5cdFx0XHR9XHRcclxuXHRcdH1cdFx0XHJcblx0XHRidXR0b25bdHlwZT1zdWJtaXRdIHtcclxuXHRcdFx0YmFja2dyb3VuZC1jb2xvcjogI2I5YjliOTtcblx0XHRcdGNvbG9yOiAjZmZmO1xuXHRcdFx0Ym9yZGVyLXJhZGl1czogNHB4O1xuXHRcdFx0cGFkZGluZzogNnB4IDA7XHJcblx0XHRcdG1hcmdpbi10b3A6IDEuNWVtO1xyXG5cdFx0fVxyXG5cdH1cdFxuPC9zdHlsZT5cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///50\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i[\"return\"] != null) _i[\"return\"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      username: \"\",\n      fname: \"\",\n      lname: \"\",\n      email: \"\",\n      password: \"\" };\n\n  },\n  methods: {\n    handleSubmit: function handleSubmit() {var _this = this;\n      uni.request({\n        url: this.$baseURL + '/gwa_rest/v2/signup',\n        method: 'POST',\n        data: {\n          username: this.username,\n          name: this.fname + \" \" + this.lname,\n          first_name: this.fname,\n          last_name: this.lname,\n          email: this.email,\n          password: this.password } }).\n\n      then(function (_ref) {var _ref2 = _slicedToArray(_ref, 2),err = _ref2[0],res = _ref2[1];\n        if (res.data === \"success\") {\n          uni.showModal({\n            title: 'Success',\n            content: 'New user has been created. Please login.',\n            showCancel: false,\n            success: function success(res) {\n              if (res.confirm) {\n                _this.$emit('showLoginForm');\n              }\n            } });\n\n        } else {\n          uni.showModal({\n            title: 'Alert',\n            content: 'There is some error when creating the user.',\n            showCancel: false });\n\n        }\n      });\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9TaWdudXBGb3JtLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0JBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0Esa0JBREE7QUFFQSxlQUZBO0FBR0EsZUFIQTtBQUlBLGVBSkE7QUFLQSxrQkFMQTs7QUFPQSxHQVRBO0FBVUE7QUFDQSxnQkFEQSwwQkFDQTtBQUNBO0FBQ0Esa0RBREE7QUFFQSxzQkFGQTtBQUdBO0FBQ0EsaUNBREE7QUFFQSw2Q0FGQTtBQUdBLGdDQUhBO0FBSUEsK0JBSkE7QUFLQSwyQkFMQTtBQU1BLGlDQU5BLEVBSEE7O0FBV0EsVUFYQSxDQVdBO0FBQ0E7QUFDQTtBQUNBLDRCQURBO0FBRUEsK0RBRkE7QUFHQSw2QkFIQTtBQUlBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsYUFSQTs7QUFVQSxTQVhBLE1BV0E7QUFDQTtBQUNBLDBCQURBO0FBRUEsa0VBRkE7QUFHQSw2QkFIQTs7QUFLQTtBQUNBLE9BOUJBO0FBK0JBLEtBakNBLEVBVkEsRSIsImZpbGUiOiI1MC5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cclxuXHQ8ZGl2IGlkPVwic2lnbnVwLXdyYXBwZXJcIj5cclxuXHRcdDxoMT5SZWdpc3RlcjwvaDE+XHJcblx0XHQ8Zm9ybSBpZD1cInNpZ251cC1mb3JtXCIgQHN1Ym1pdD1cImhhbmRsZVN1Ym1pdFwiPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5Vc2VybmFtZTwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJ1c2VybmFtZVwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5GaXJzdCBOYW1lPC9sYWJlbD5cclxuXHRcdFx0XHQ8aW5wdXQgdi1tb2RlbD1cImZuYW1lXCIgLz5cclxuXHRcdFx0PC9kaXY+XHJcblx0XHRcdDxkaXYgY2xhc3M9XCJmb3JtLWdyb3VwXCI+XHJcblx0XHRcdFx0PGxhYmVsPkxhc3QgTmFtZTwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJsbmFtZVwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5FbWFpbDwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJlbWFpbFwiIHR5cGU9XCJlbWFpbFwiIC8+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG5cdFx0XHRcdDxsYWJlbD5QYXNzd29yZDwvbGFiZWw+XHJcblx0XHRcdFx0PGlucHV0IHYtbW9kZWw9XCJwYXNzd29yZFwiIHR5cGU9XCJwYXNzd29yZFwiIC8+XHJcblx0XHRcdDwvZGl2Plx0XHJcblx0XHRcdDxidXR0b24gZm9ybS10eXBlPVwic3VibWl0XCI+U2lnbnVwPC9idXR0b24+XHJcblx0XHQ8L2Zvcm0+XHJcblx0PC9kaXY+XHJcblxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cclxuXHRleHBvcnQgZGVmYXVsdCB7XHJcblx0XHRkYXRhKCkge1xyXG5cdFx0XHRyZXR1cm4ge1xyXG5cdFx0XHRcdHVzZXJuYW1lOiBcIlwiLFxyXG5cdFx0XHRcdGZuYW1lOiBcIlwiLFxyXG5cdFx0XHRcdGxuYW1lOiBcIlwiLFxyXG5cdFx0XHRcdGVtYWlsOiBcIlwiLFxyXG5cdFx0XHRcdHBhc3N3b3JkOiBcIlwiXHJcblx0XHRcdH1cclxuXHRcdH0sXHJcblx0XHRtZXRob2RzOiB7XHJcblx0XHRcdGhhbmRsZVN1Ym1pdCgpIHtcclxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0XHR1cmw6IHRoaXMuJGJhc2VVUkwgKyAnL2d3YV9yZXN0L3YyL3NpZ251cCcsXHJcblx0XHRcdFx0XHRtZXRob2Q6ICdQT1NUJyxcclxuXHRcdFx0XHRcdGRhdGE6IHtcclxuXHRcdFx0XHRcdFx0dXNlcm5hbWU6IHRoaXMudXNlcm5hbWUsXHJcblx0XHRcdFx0XHRcdG5hbWU6IHRoaXMuZm5hbWUrXCIgXCIrdGhpcy5sbmFtZSxcclxuXHRcdFx0XHRcdFx0Zmlyc3RfbmFtZTogdGhpcy5mbmFtZSxcclxuXHRcdFx0XHRcdFx0bGFzdF9uYW1lOiB0aGlzLmxuYW1lLFxyXG5cdFx0XHRcdFx0XHRlbWFpbDogdGhpcy5lbWFpbCxcclxuXHRcdFx0XHRcdFx0cGFzc3dvcmQ6IHRoaXMucGFzc3dvcmRcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9KS50aGVuKChbZXJyLCByZXNdKSA9PiB7XHJcblx0XHRcdFx0XHRpZihyZXMuZGF0YT09PVwic3VjY2Vzc1wiKXtcclxuXHRcdFx0XHRcdFx0dW5pLnNob3dNb2RhbCh7XHJcblx0XHRcdFx0XHRcdFx0dGl0bGU6ICdTdWNjZXNzJyxcclxuXHRcdFx0XHRcdFx0XHRjb250ZW50OiAnTmV3IHVzZXIgaGFzIGJlZW4gY3JlYXRlZC4gUGxlYXNlIGxvZ2luLicsXHJcblx0XHRcdFx0XHRcdFx0c2hvd0NhbmNlbDogZmFsc2UsXHJcblx0XHRcdFx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0XHRcdFx0aWYocmVzLmNvbmZpcm0pIHtcclxuXHRcdFx0XHRcdFx0XHRcdFx0dGhpcy4kZW1pdCgnc2hvd0xvZ2luRm9ybScpXHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0XHR9KVx0XHRcdFx0XHRcdFx0XHJcblx0XHRcdFx0XHR9ZWxzZXtcclxuXHRcdFx0XHRcdFx0dW5pLnNob3dNb2RhbCh7XHJcblx0XHRcdFx0XHRcdFx0dGl0bGU6ICdBbGVydCcsXHJcblx0XHRcdFx0XHRcdFx0Y29udGVudDogJ1RoZXJlIGlzIHNvbWUgZXJyb3Igd2hlbiBjcmVhdGluZyB0aGUgdXNlci4nLFxyXG5cdFx0XHRcdFx0XHRcdHNob3dDYW5jZWw6IGZhbHNlXHJcblx0XHRcdFx0XHRcdH0pXHRcdFx0XHRcdFx0XHRcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZSBsYW5nPVwic2Nzc1wiIHNjb3BlZD5cclxuXHQjc2lnbnVwLXdyYXBwZXIge1xyXG5cdFx0cGFkZGluZy10b3A6IDY1cHg7XHJcblx0XHRcclxuXHRcdGgxIHtcclxuXHRcdFx0bWFyZ2luLWJvdHRvbTogLjVlbTtcclxuXHRcdH1cclxuXHRcdC5mb3JtLWdyb3VwIHtcclxuXHRcdFx0bWFyZ2luLWJvdHRvbTogMWVtO1xyXG5cdFx0XHRcclxuXHRcdFx0bGFiZWwge1xyXG5cdFx0XHRcdG1hcmdpbi1ib3R0b206IDVweDtcclxuXHRcdFx0XHRmb250LXNpemU6IDEuMWVtO1xyXG5cdFx0XHR9XHJcblx0XHRcdGlucHV0IHtcclxuXHRcdFx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG5cdFx0XHRcdGNvbG9yOiAjMDAwO1xyXG5cdFx0XHRcdHBhZGRpbmc6IDVweDtcclxuXHRcdFx0XHRtaW4taGVpZ2h0OiAzMHB4O1xyXG5cdFx0XHR9XHRcclxuXHRcdH1cdFx0XHJcblx0XHRidXR0b24ge1xyXG5cdFx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAjYjliOWI5O1xuXHRcdFx0Y29sb3I6ICNmZmY7XG5cdFx0XHRib3JkZXItcmFkaXVzOiA0cHg7XG5cdFx0XHRwYWRkaW5nOiA2cHggMDtcclxuXHRcdFx0bWFyZ2luLXRvcDogMS41ZW07XHJcblx0XHR9XHJcblx0fVx0XG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///50\n");
 
 /***/ }),
 /* 51 */

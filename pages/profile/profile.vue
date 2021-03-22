@@ -2,7 +2,7 @@
 	<view id="profile-form">
 		<div class="container">
 			<LoginForm v-if="showLogin" />
-			<SignupForm v-if="!showLogin" />
+			<SignupForm v-if="!showLogin" @showLoginForm="() => showLogin = true" />
 			<div class="form-switch-wrapper">
 				<a class="form-switch" href="#" @click.prevent="toggleForm">Switch to {{ showLogin ? 'signup' : 'login' }}</a>
 			</div>
