@@ -2,23 +2,23 @@
 	<view id="projects">
 		<div class="container-fluid p-0">
 			<ul class="categories_wrapper">
-				<li><a href="">All</a></li>
-				<li><a href="">Projects</a></li>
-				<li><a href="">For Sale</a></li>
-				<li><a href="">For Rent</a></li>
+				<li><a href="#" @click.prevent="() => toggleCategory(null)">All</a></li>
+				<li v-for="category in categories" :key="category.id">
+					<a :href="category.link" @click.prevent="() => toggleCategory(category.id)">{{ category.name }}</a>
+				</li>
 			</ul>
-			<div class="row projects-wrapper">
+			<div class="row projects-wrapper" v-for="project in projects" :key="project.id">
 				<div class="col-12 p-0">
-					<a href="">
-						<img src="static/projects/demo.jpg" alt="demo-project" />
+					<a :href="project.link">
+						<img :src="project.fimg_url" alt="demo-project" />
 					</a>
 				</div>
 				<div class="col-12 inner-wrapper">
 					<a href="">
-						<h3>Demo Project</h3>
+						<h3>{{ project.title.rendered }}</h3>
 					</a>
 					<div class="d-flex justify-content-between">
-						<div>503 Kent Street, Mascot, NSW 2020</div>
+						<div>{{ project.address[0] }}</div>
 						<div class="share-btn" @click="open"><i class="fa fa-share-square-o" aria-hidden="true"></i></div>
 					</div>
 				</div>
@@ -34,7 +34,9 @@
 	export default {
 		data() {
 			return {
-				
+				projects: null,
+				categories: null,
+				// baseURL: baseURL
 			}
 		},
 		onLoad(){
@@ -52,14 +54,48 @@
 			},
 			select({item, index}) {
 				console.log('selected social platform: ', item, index)
+			},
+			toggleCategory(id) {
+				if(id) {
+					uni.request({
+						url: this.$baseURL + '/all_projects?_embed&projects_categories='+id,
+						method: 'get'
+					}).then(([err, res]) => {
+						this.projects = res.data
+					})					
+				}else{
+					uni.request({
+						url: this.$baseURL + '/all_projects?_embed',
+						method: 'get'
+					}).then(([err, res]) => {
+						console.log(res.data); 
+						this.projects = res.data
+					})
+				}
 			}
+		},
+		onLoad() {
+			uni.request({
+				url: this.$baseURL + '/all_projects?_embed',
+				method: 'get'
+			}).then(([err, res]) => {
+				console.log(res.data); 
+				this.projects = res.data
+			})
+			
+			uni.request({
+				url: this.$baseURL + '/projects_categories',
+				method: 'get'
+			}).then(([err, res]) => {
+				this.categories = res.data
+			})
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
 	#projects {
-		padding-top: 45px;
+		padding-top: 65px;
 		.categories_wrapper{
 			list-style: none;
 			display: flex;
