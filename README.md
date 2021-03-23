@@ -4,7 +4,7 @@
 
 ## 环境说明
 
-本文档中演示的编程语言是Uni-app和PHP中的Vue.js。
+本文档中演示的编程语言是Uni-app中的Vue.js和PHP。
 
 ## 前提条件
 
