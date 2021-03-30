@@ -1,10 +1,22 @@
 {
 	"pages": [
+		// Hotels
 		{
 			"path": "pages/index/index",
-			
 			"style": {
-			 
+				"navigationBarTitleText": "Hotels",
+				"backgroundColor": "#FFFFFF",
+				"app-plus": {
+					"backgroundColor": "#FFFFFF",
+					// "titleNView": false,
+					"bounce": "none"
+				}
+			}
+		},
+		// Single Hotel
+		{
+			"path": "pages/index/index-single",
+			"style": {
 				"backgroundColor": "#FFFFFF",
 				"app-plus": {
 					"backgroundColor": "#FFFFFF",
