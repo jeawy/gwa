@@ -4,11 +4,11 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "Hotels",
+				// "navigationBarTitleText": "Hotels",
 				"backgroundColor": "#FFFFFF",
 				"app-plus": {
 					"backgroundColor": "#FFFFFF",
-					// "titleNView": false,
+					"titleNView": false,
 					"bounce": "none"
 				}
 			}
@@ -55,11 +55,11 @@
             "path" : "pages/services/services",
             "style" :                                                                                    
             {
-				"navigationBarTitleText": "Services",
+				// "navigationBarTitleText": "Services",
                 "backgroundColor": "#1F1F1F",
                 "app-plus": {
                 	"backgroundColor": "#1F1F1F",
-                	// "titleNView": false,
+                	"titleNView": false,
                 	"bounce": "none"
                 }
             }
