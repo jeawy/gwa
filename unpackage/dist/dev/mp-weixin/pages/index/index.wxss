@@ -24,17 +24,39 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.rf-index.data-v-57280228 {
-  /*轮播图*/
+.hotels-wrapper.data-v-57280228 {
+  padding: 0 15rpx;
 }
-.rf-index swiper.data-v-57280228 {
-  height: calc(100vh - 100rpx);
+.hotel-1.data-v-57280228,
+.hotel-2.data-v-57280228 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 700rpx;
+}
+.hotel-1 .info-wrapper.data-v-57280228,
+.hotel-2 .info-wrapper.data-v-57280228 {
   width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.rf-index swiper .swiper-item.data-v-57280228 {
-  height: 100%;
+.hotel-1 .info-wrapper ._h1.data-v-57280228,
+.hotel-2 .info-wrapper ._h1.data-v-57280228 {
+  text-align: center;
+  color: #fff;
 }
-.rf-index swiper image.data-v-57280228 {
-  height: 100%;
+.hotel-1.data-v-57280228 {
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/static/hotels/1.jpg);
+  background: -webkit-linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/hotels/1.jpg);
+  background: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/hotels/1.jpg);
+}
+.hotel-2.data-v-57280228 {
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/static/hotels/2.jpg);
+  background: -webkit-linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/hotels/2.jpg);
+  background: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/hotels/2.jpg);
 }
 

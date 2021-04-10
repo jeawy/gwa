@@ -1,4 +1,6 @@
 {
   "backgroundColor": "#FFFFFF",
-  "usingComponents": {}
+  "usingComponents": {
+    "logo": "/components/BaseLogo"
+  }
 }

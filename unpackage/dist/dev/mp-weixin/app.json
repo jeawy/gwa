@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/index-single",
     "pages/projects/projects",
     "pages/community/community",
     "pages/services/services",
+    "pages/services/services-single",
     "pages/profile/profile"
   ],
   "subPackages": [],
@@ -21,25 +23,25 @@
         "pagePath": "pages/index/index",
         "iconPath": "static/tabbar/ba.png",
         "selectedIconPath": "static/tabbar/baa.png",
-        "text": "Stay"
+        "text": "Hotels"
       },
       {
         "pagePath": "pages/projects/projects",
         "iconPath": "static/tabbar/bb.png",
         "selectedIconPath": "static/tabbar/bba.png",
-        "text": "Projects"
+        "text": "Residence"
       },
       {
         "pagePath": "pages/community/community",
         "iconPath": "static/tabbar/bc.png",
         "selectedIconPath": "static/tabbar/bca.png",
-        "text": "Community"
+        "text": "Discover"
       },
       {
         "pagePath": "pages/services/services",
         "iconPath": "static/tabbar/bd.png",
         "selectedIconPath": "static/tabbar/bda.png",
-        "text": "Services"
+        "text": "Service"
       },
       {
         "pagePath": "pages/profile/profile",
@@ -50,6 +52,5 @@
     ]
   },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }
