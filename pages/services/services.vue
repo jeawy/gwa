@@ -1,5 +1,5 @@
 <template>
-	<view class="container-fluid hasLogo">
+	<view class=" hasLogo">
 		<Logo />
 		<view class="row">
 			<view class="col-6 p-0 content" 
