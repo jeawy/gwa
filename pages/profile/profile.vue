@@ -1,5 +1,6 @@
 <template>
-	<view id="profile-form">
+	<view id="profile-form" class="hasLogo">
+		<Logo />
 		<div class="container">
 			<LoginForm v-if="showLogin" />
 			<SignupForm v-if="!showLogin" @showLoginForm="() => showLogin = true" />
@@ -13,10 +14,12 @@
 <script>
 	import SignupForm from './SignupForm.vue'
 	import LoginForm from './LoginForm.vue'
+	import Logo from "@/components/BaseLogo.vue"
 	export default {
 		components: {
 			SignupForm,
-			LoginForm
+			LoginForm,
+			Logo
 		},
 		data() {
 			return {

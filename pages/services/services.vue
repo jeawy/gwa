@@ -1,5 +1,6 @@
 <template>
-	<view class="container-fluid">
+	<view class="container-fluid hasLogo">
+		<Logo />
 		<view class="row">
 			<view class="col-6 p-0 content" 
 				 v-for="cat in categories" 
@@ -23,11 +24,15 @@
 </template>
 
 <script>
+	import Logo from "@/components/BaseLogo.vue"
 	export default {
 		data() {
 			return {
 				categories: null
 			}
+		},
+		components: {
+			Logo
 		},
 		methods: {
 			toggleCategory(id) {

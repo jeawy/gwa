@@ -1,5 +1,6 @@
 <template>
-	<view id="projects">
+	<view id="projects" class="hasLogo">
+		<Logo />
 		<div class="container-fluid p-0">
 			<ul class="categories_wrapper">
 				<li><a href="#" @click.prevent="() => toggleCategory(null)">All</a></li>
@@ -31,6 +32,7 @@
 </template>
 
 <script>
+	import Logo from "@/components/BaseLogo.vue"
 	export default {
 		data() {
 			return {
@@ -38,6 +40,9 @@
 				categories: null,
 				// baseURL: baseURL
 			}
+		},
+		components: {
+			Logo
 		},
 		onLoad(){
 			var height=0;//定义动态的高度变量，如高度为定值，可以直接写
