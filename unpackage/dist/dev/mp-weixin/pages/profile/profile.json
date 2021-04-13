@@ -1,7 +1,0 @@
-{
-  "backgroundColor": "#1F1F1F",
-  "usingComponents": {
-    "signup-form": "/pages/profile/SignupForm",
-    "login-form": "/pages/profile/LoginForm"
-  }
-}
