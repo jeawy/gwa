@@ -1,6 +1,6 @@
 <template>
 	<view class="header">
-		<image class="logo" src="../static/logo.jpg" mode="aspectFit"></image>
+		<image class="logo" src="../static/toplogo.svg" mode="aspectFit"></image>
 	</view>
 </template>
 
@@ -15,7 +15,7 @@
 
 <style lang="scss">
 	.header {
-		padding-top: calc(var(--status-bar-height) + 8rpx);
+		padding-top: calc(var(--status-bar-height) + 4rpx);
 		height: 80rpx;
 		width: 100%;
 		display: flex;
@@ -27,6 +27,7 @@
 		box-sizing: content-box;
 		.logo {
 			height: 100%;
+			padding-bottom: 10rpx;
 		}
 	}
 </style>
