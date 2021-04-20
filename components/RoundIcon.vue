@@ -13,7 +13,8 @@
 			:type="type" 
 			:size="size" 
 			class="icon" 
-			:color="color" />
+			:color="color"
+			 @click="onClick"/>
 		<text class="title">{{ title }}</text>
 	</view>
 </template>
@@ -25,7 +26,12 @@
 			size: String,
 			color: String,
 			borderColor: String,
-			title: String
+			title: String,
+		},
+		methods: {
+			onClick() {
+				this.$emit('onPress')
+			}
 		}
 	}
 </script>

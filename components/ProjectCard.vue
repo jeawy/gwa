@@ -2,23 +2,25 @@
 	<view class="container">
 		<view class="img-groups">
 			<view class="left">
-				<image class="img" mode="aspectFill" src="https://i.imgur.com/CJGp3TO.png" />
+				<image class="img" mode="aspectFill" :src="featured_img" />
 			</view>
 			<view class="right">
-				<image class="img" mode="widthFix" src="https://i.imgur.com/CJGp3TO.png" />
-				<image class="img" mode="widthFix" src="https://i.imgur.com/CJGp3TO.png" />
+				<image v-for="photo in gallery" 
+					   class="img" 
+					   mode="widthFix" 
+					   :src="photo.full" />
 			</view>
 		</view>
 		<view class="details">
 			<text class="name">{{ name }}</text>
 			<ul class="categories">
-				<li>For rent</li>
-				<li>For sale</li>
+				<li v-for="(cat, idx) in categories"
+					:key="idx">{{ cat }}</li>
 			</ul>
-			<view class="address">
-				<uni-icons type="location-filled" size="15" color="#e6e6e6" />
-				<text>
-					dasdsadasdsad
+			<view>
+				<uni-icons type="location-filled" size="15" color="#000" />
+				<text class="address">
+					{{ address }}
 				</text>
 			</view>
 		</view>
@@ -28,7 +30,11 @@
 <script>
 	export default {
 		props: {
-			name: String
+			name: String,
+			address: String,
+			featured_img: String,
+			gallery: Array,
+			categories: Array
 		},
 	}
 </script>
@@ -36,6 +42,7 @@
 <style lang="scss" scoped>
 	.container {
 		width: 100%;
+		margin-top: 20rpx !important;
 		margin-bottom: 30rpx;
 		padding: 20rpx 15rpx !important;
 		background-color: #fff;
@@ -73,8 +80,15 @@
 		}
 		.details {
 			.name {
+				display: block;
 				font-size: 18px;
-				margin-bottom: 20rpx;
+				margin-top: 20rpx;
+				margin-bottom: 10rpx;
+				color: #000;
+			}
+			.address {
+				font-size: 12px;
+				color: #000;
 			}
 			.categories{
 				list-style: none;

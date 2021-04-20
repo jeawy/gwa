@@ -1,126 +1,134 @@
 <template>
-	<view class="container">
-		<view class="header">
-			<view class="picker">
-				<view class="uni-list-cell">
-					<view class="uni-list-cell-db">
-						<picker
-							@change="bindPickerChange"
-							:value="index"
-							:range="array"
-						>
-							<view class="uni-input">
-								{{ array[index] }}
-								<uni-icons
-									type="arrowdown"
-									size="15"
-									color="#fff"
-									:style="{ marginLeft: '10rpx' }"
-								/>
-							</view>
-						</picker>
+	<view>
+		<Logo />
+		<view class="container">
+			<view class="header">
+				<view class="picker">
+					<view class="uni-list-cell">
+						<view class="uni-list-cell-db">
+							<picker
+								@change="bindPickerChange"
+								:value="index"
+								:range="array"
+							>
+								<view class="uni-input">
+									{{ array[index] }}
+									<uni-icons
+										type="arrowdown"
+										size="15"
+										color="#fff"
+										:style="{ marginLeft: '10rpx' }"
+									/>
+								</view>
+							</picker>
+						</view>
 					</view>
 				</view>
+				<view class="search">
+					<input confirm-type="search" placeholder="输入关键词搜索" />
+				</view>
+				<view class="controls">
+					<uni-icons
+						type="scan"
+						size="25"
+						color="#fff"
+						class="icons"
+					/>
+					<uni-icons
+						type="chat"
+						size="25"
+						color="#fff"
+						class="icons"
+					/>
+				</view>
 			</view>
-			<view class="search">
-				<input confirm-type="search" placeholder="输入关键词搜索" />
-			</view>
-			<view class="controls">
-				<uni-icons type="scan" size="25" color="#fff" class="icons" />
-				<uni-icons type="chat" size="25" color="#fff" class="icons" />
-			</view>
-		</view>
 
-		<swiper
-			class="slider"
-			:indicator-dots="true"
-			indicator-color="#E2E2E2"
-			indicator-active-color="#D6B88B"
-			:autoplay="true"
-			:interval="5000"
-			:duration="500"
-		>
-			<swiper-item>
-				<view
-					><image
-						class="img"
-						mode="widthFix"
-						src="https://i.imgur.com/CJGp3TO.png"
-				/></view>
-			</swiper-item>
-			<swiper-item>
-				<view
-					><image
-						class="img"
-						mode="widthFix"
-						src="https://i.imgur.com/CJGp3TO.png"
-				/></view>
-			</swiper-item>
-			<swiper-item>
-				<view
-					><image
-						class="img"
-						mode="widthFix"
-						src="https://i.imgur.com/CJGp3TO.png"
-				/></view>
-			</swiper-item>
-		</swiper>
-
-		<view class="services-wrapper">
-			<RoundIcon
-				type="home"
-				size="20"
-				color="#D6B88B"
-				borderColor="#D6B88B"
-				title="Hotels"
-			/>
-			<RoundIcon
-				type="shop"
-				size="20"
-				color="#D6B88B"
-				borderColor="#D6B88B"
-				title="Residence"
-			/>
-			<RoundIcon
-				type="paperclip"
-				size="20"
-				color="#D6B88B"
-				borderColor="#D6B88B"
-				title="Services"
-			/>
-			<RoundIcon
-				type="person"
-				size="20"
-				color="#D6B88B"
-				borderColor="#D6B88B"
-				title="Profile"
-			/>
-		</view>
-
-		<view class="projects-wrapper">
-			<view class="projects-header">
-				<text class="title">Projects</text>
-				<text class="view-more"
-					>View more
-					<uni-icons type="forward" size="15" color="#e2e2e2" />
-				</text>
-			</view>
-			<scroll-view
-				class="projects-scroll"
-				scroll-x="true"
-				:scroll-left="scrollLeft"
-				@scroll="scroll"
+			<swiper
+				class="slider"
+				:indicator-dots="true"
+				indicator-color="#E2E2E2"
+				indicator-active-color="#D6B88B"
+				:autoplay="true"
+				:interval="5000"
+				:duration="500"
 			>
-				<gesture @slideLeft="slideLeft" @slideRight="slideRight">
-					<view
-						class="scroll-item"
-						v-for="(project, index) in projects"
-						:key="index"
-					>
-						<ProjectCard :name="project" />
+				<swiper-item v-for="banner in banners" :key="banner.id">
+					<image class="img" mode="widthFix" :src="banner.fimg_url" />
+				</swiper-item>
+			</swiper>
+
+			<view class="services-wrapper">
+				<RoundIcon
+					type="home"
+					size="20"
+					color="#D6B88B"
+					borderColor="#D6B88B"
+					title="Hotels"
+					@onPress="() => redirectToTab('/pages/index/index')"
+				/>
+				<RoundIcon
+					type="shop"
+					size="20"
+					color="#D6B88B"
+					borderColor="#D6B88B"
+					title="Residence"
+					@onPress="() => redirectToTab('/pages/projects/projects')"
+				/>
+				<RoundIcon
+					type="paperclip"
+					size="20"
+					color="#D6B88B"
+					borderColor="#D6B88B"
+					title="Services"
+					@onPress="() => redirectToTab('/pages/services/services')"
+				/>
+				<RoundIcon
+					type="person"
+					size="20"
+					color="#D6B88B"
+					borderColor="#D6B88B"
+					title="Profile"
+					@onPress="() => redirectToTab('/pages/profile/profile')"
+				/>
+			</view>
+
+			<view class="projects-wrapper">
+				<view class="projects-header">
+					<text class="title">Projects</text>
+					<view>
+						<text
+							class="view-more"
+							@click="
+								() => redirectToTab('/pages/projects/projects')
+							"
+							>View more
+						</text>
+						<uni-icons type="forward" size="15" color="#e2e2e2" />
 					</view>
-				</gesture>
-			</scroll-view>
+				</view>
+				<scroll-view
+					class="projects-scroll"
+					scroll-x="false"
+					:scroll-into-view="scrollIntoIndex"
+				>
+					<gesture @slideLeft="slideLeft" @slideRight="slideRight">
+						<view
+							class="scroll-item"
+							v-for="(project, index) in projects"
+							:key="project.id"
+							:id="'left' + index"
+						>
+							<ProjectCard
+								:name="project.title.rendered"
+								:address="project.address[0]"
+								:featured_img="project.fimg_url"
+								:gallery="project.gallery_photos"
+								:categories="project.projects_categories_names"
+							/>
+						</view>
+					</gesture>
+				</scroll-view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -129,39 +137,71 @@
 	import RoundIcon from '../../components/RoundIcon.vue';
 	import ProjectCard from '../../components/ProjectCard.vue';
 	import gesture from '../../components/gesture/gesture.vue';
+	import Logo from '@/components/BaseLogo.vue';
 	export default {
 		components: {
 			RoundIcon,
 			ProjectCard,
 			gesture,
+			Logo,
 		},
 		data() {
 			return {
 				title: 'picker',
 				array: ['Chatswood', 'Ashfield', 'Burwood', 'Eastwood'],
 				index: 0,
-				projects: ['Project 1', 'Project 2', 'Project 3'],
-				scrollLeft: 0,
+				projects: [],
+				banners: [],
+				scrollIntoIndex: 'left0',
 			};
 		},
-		onReady() {},
+		onLoad() {
+			// get all banners data
+			uni.request({
+				url: this.$baseURL + '/wp/v2/banner',
+				method: 'GET',
+			}).then(([err, res]) => {
+				if (!err) {
+					this.banners = res.data;
+				}
+			});
+
+			// get all projects data
+			uni.request({
+				url: this.$baseURL + '/wp/v2/all_projects',
+				method: 'GET',
+			}).then(([err, res]) => {
+				if (!err) {
+					this.projects = res.data;
+				}
+			});
+		},
 		methods: {
 			bindPickerChange: function (e) {
 				console.log('picker发送选择改变，携带值为', e.target.value);
 				this.index = e.target.value;
 			},
-			scroll(e) {
-				e.preventDefault();
-				const details = e.detail;
-				console.log(details.deltaX);
+			redirectToTab(url) {
+				uni.switchTab({
+					url: url,
+				});
 			},
 			slideLeft() {
-				console.log('slide left');
-				// go to then next post
-				this.scrollLeft = 10;
+				// go to next post
+				/* let index = Number(this.scrollIntoIndex.split('left')[1]);
+				index =
+					index + 1 > this.projects.length - 1
+						? this.projects.length - 1
+						: index + 1;
+				this.scrollIntoIndex = 'left' + index;
+				console.log('slide left: ', this.scrollIntoIndex); */
 			},
 			slideRight() {
-				console.log('slide right');
+				// go to prev post
+				/* let index = Number(this.scrollIntoIndex.split('left')[1]);
+				index = index - 1 < 0 ? 0 : index - 1;
+				this.scrollIntoIndex = 'left' + index;
+				console.log('slide right: ', this.scrollIntoIndex); */
 			},
 		},
 	};
@@ -169,7 +209,7 @@
 
 <style lang="scss" scoped>
 	.container {
-		margin-top: 50rpx;
+		margin-top: $uni-logo-bar-height + 70rpx;
 		padding-left: 30rpx;
 		padding-right: 30rpx;
 		padding-bottom: 60rpx;
@@ -214,7 +254,6 @@
 				}
 				.view-more {
 					font-size: 15px;
-					vertical-align: middle;
 				}
 			}
 			.projects-scroll {

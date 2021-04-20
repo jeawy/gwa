@@ -1,22 +1,26 @@
 <template>
 	<view class="header">
-		<image class="logo" src="../static/toplogo.svg" mode="aspectFit"></image>
+		<image
+			class="logo"
+			src="../static/toplogo.svg"
+			mode="aspectFit"
+		></image>
 	</view>
 </template>
 
 <script>
 	export default {
-		name: "BaseLogo",
+		name: 'BaseLogo',
 		data() {
 			return {};
-		}
-	}
+		},
+	};
 </script>
 
 <style lang="scss">
 	.header {
 		padding-top: calc(var(--status-bar-height) + 4rpx);
-		height: 80rpx;
+		height: $uni-logo-bar-height;
 		width: 100%;
 		display: flex;
 		position: fixed;
