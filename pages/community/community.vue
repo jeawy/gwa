@@ -239,7 +239,7 @@
 
 <style lang="scss" scoped>
 	.container {
-		margin-top: calc($uni-logo-bar-height + var(--status-bar-height) + 70rpx);
+		margin-top: $uni-logo-bar-height + 100rpx ;
 		padding-left: 30rpx;
 		padding-right: 30rpx;
 		padding-bottom: 60rpx;
