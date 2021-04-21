@@ -53,7 +53,7 @@
 				:duration="500"
 			>
 				<swiper-item v-for="banner in banners" :key="banner.id">
-					<image class="img" mode="widthFix" :src="banner.fimg_url" />
+					<image class="img" mode="widthFix" :src="banner.fimg_url" @click="() => previewImg(banner.fimg_url)" />
 				</swiper-item>
 			</swiper>
 
@@ -108,7 +108,7 @@
 				</view>
 				<scroll-view
 					class="projects-scroll"
-					scroll-x="false"
+					:scroll-x="enableScroll"
 					:scroll-into-view="scrollIntoIndex"
 				>
 					<gesture @slideLeft="slideLeft" @slideRight="slideRight">
@@ -153,6 +153,7 @@
 				projects: [],
 				banners: [],
 				scrollIntoIndex: 'left0',
+				enableScroll: false,
 			};
 		},
 		onLoad() {
@@ -188,28 +189,57 @@
 			},
 			slideLeft() {
 				// go to next post
-				/* let index = Number(this.scrollIntoIndex.split('left')[1]);
+				let index = Number(this.scrollIntoIndex.split('left')[1]);
 				index =
 					index + 1 > this.projects.length - 1
 						? this.projects.length - 1
 						: index + 1;
-				this.scrollIntoIndex = 'left' + index;
-				console.log('slide left: ', this.scrollIntoIndex); */
+				this.enableScroll = true;
+				this.$nextTick(() => {
+					this.scrollIntoIndex = 'left' + index;
+					// wait for scrolling to be finished
+					setTimeout(() => {
+						this.enableScroll = false;
+					}, 300);
+				});
+				console.log('slide left: ', this.scrollIntoIndex);
 			},
 			slideRight() {
 				// go to prev post
-				/* let index = Number(this.scrollIntoIndex.split('left')[1]);
+				let index = Number(this.scrollIntoIndex.split('left')[1]);
 				index = index - 1 < 0 ? 0 : index - 1;
-				this.scrollIntoIndex = 'left' + index;
-				console.log('slide right: ', this.scrollIntoIndex); */
+				this.enableScroll = true;
+				this.$nextTick(() => {
+					this.scrollIntoIndex = 'left' + index;
+					// wait for scrolling to be finished
+					setTimeout(() => {
+						this.enableScroll = false;
+					}, 300);
+				});
+				console.log('slide right: ', this.scrollIntoIndex);
 			},
+			previewImg(url) {
+				wx.previewImage({
+					urls: this.banners.map(banner => banner.fimg_url),
+					current: url,
+					success: (res) => {
+						console.log('succeed', res)
+					},
+					fail: (res) => {
+						console.log('fail', res)
+					},
+					complete: (res) => {
+						console.log('complete', res)
+					}
+				})
+			}
 		},
 	};
 </script>
 
 <style lang="scss" scoped>
 	.container {
-		margin-top: $uni-logo-bar-height + 70rpx;
+		margin-top: calc($uni-logo-bar-height + var(--status-bar-height) + 70rpx);
 		padding-left: 30rpx;
 		padding-right: 30rpx;
 		padding-bottom: 60rpx;
