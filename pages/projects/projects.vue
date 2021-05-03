@@ -10,7 +10,7 @@
 			</ul>
 			<div class="row projects-wrapper" v-for="project in projects" :key="project.id">
 				<div class="col-12 p-0">
-					<a :href="project.link">
+					<a @click.prevent="() => redirectToProjectDetails(project.id)">
 						<img :src="project.fimg_url" alt="demo-project" />
 					</a>
 				</div>
@@ -77,6 +77,12 @@
 						this.projects = res.data
 					})
 				}
+			},
+			redirectToProjectDetails(projectId) {
+				console.log('called', projectId)
+				uni.navigateTo({
+					url: `./project-single?project_id=${projectId}`
+				})
 			}
 		},
 		onLoad() {

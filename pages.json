@@ -37,8 +37,20 @@
                 }
             }
             
-        }
-        ,{
+        },
+		{
+		    "path" : "pages/projects/project-single",
+		    "style" :                                                                                    
+		    {
+		        "backgroundColor": "#1F1F1F",
+		        "app-plus": {
+		        	"backgroundColor": "#1F1F1F",
+		        	"titleNView": false,
+		        	"bounce": "none"
+		        }
+		    }
+		},
+        {
             "path" : "pages/community/community",
             "style" :                                                                                    
             { 
