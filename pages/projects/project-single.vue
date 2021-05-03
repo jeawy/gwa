@@ -74,6 +74,7 @@
 					this.availableDate = res.data.available_date[0]
 					this.photos = res.data.gallery_photos.map(item => item.full)
 					this.tag = res.data.projects_categories_names[0]
+					this.mapUrl = "https://www.google.com/maps/embed/v1/place?key="+MAP_API_KEY+"&q="+res.data.address[0]
 				}
 			})
 		},
@@ -86,7 +87,7 @@
 				features: "",
 				availableDate: "",
 				photos: [],
-				mapUrl: "https://www.google.com/maps/embed/v1/place?key="+MAP_API_KEY+"&q="+this.address
+				mapUrl: ""
 			}
 		},
 		methods: {
