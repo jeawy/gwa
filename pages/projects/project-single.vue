@@ -19,9 +19,8 @@
 			<view class="header">
 				<h2 class="title">{{ title }}</h2>
 				<p>{{ address }}</p>
-				<div>
-					Project Type: <div class="tag">{{ tag }}</div>
-				</div>
+				<div class="status">Project status: <div class="tag">{{ status }}</div></div>
+				<div>Project type: <div class="tag">{{ tag }}</div></div>
 			</view>
 			<view class="bottom">
 				<view class="available">
@@ -75,6 +74,7 @@
 					this.photos = res.data.gallery_photos.map(item => item.full)
 					this.tag = res.data.projects_categories_names[0]
 					this.mapUrl = "https://www.google.com/maps/embed/v1/place?key="+MAP_API_KEY+"&q="+res.data.address[0]
+					this.status = res.data.project_status[0]
 				}
 			})
 		},
@@ -87,7 +87,8 @@
 				features: "",
 				availableDate: "",
 				photos: [],
-				mapUrl: ""
+				mapUrl: "",
+				status: ""
 			}
 		},
 		methods: {
@@ -131,7 +132,9 @@
 				.title {
 					font-size: 1.4em;
 				}
-				
+				.status {
+					margin-bottom: 15rpx;
+				}
 				.tag {
 					display: inline-block;
 					color: #fff;
